@@ -23,20 +23,21 @@ module.exports = {
   },
   resolve : {
     alias: {
-      '../../theme.config$': path.join(__dirname, 'theme/theme.config')  
-    }
+      '../../theme.config$': path.join(__dirname, 'theme/theme.config')
+    },
+    extensions: ['*', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        // include: __dirname + '/src',
+        include: path.join(__dirname, '/src'),
         loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.jsx$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        query: {
+            presets: ['react','es2015']
+        }
       },
       {
         test: /\.css|scss$/,

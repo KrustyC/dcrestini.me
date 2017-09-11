@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import '../../assets/home.sass'
+
 
 import Header from './_header'
-/*
 import About from './_about'
-import Quote from './_quote'
 import Cv from './_cv'
+
+
+/*
+import Quote from './_quote'
     <About />
     <Quote />
     <Cv />
@@ -13,6 +17,8 @@ import Cv from './_cv'
 const Home = () => (
   <div>
     <Header />
+    <About />
+    <Cv />
   </div>
 
 )

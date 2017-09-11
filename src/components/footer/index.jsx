@@ -3,25 +3,22 @@ import React, { Component } from 'react'
 class About extends Component {
   render(){
    return (
-    <Segment
-      inverted
-      vertical
-      style={{ margin: '5em 0em 0em', padding: '5em 0em' }}
-    >
-      <Container textAlign='center'>
-        <Image
-          centered
-          size='mini'
-          src='/logo.png'
-        />
-        <List horizontal inverted divided link>
-          <List.Item as='a' href='#'>Site Map</List.Item>
-          <List.Item as='a' href='#'>Contact Us</List.Item>
-          <List.Item as='a' href='#'>Terms and Conditions</List.Item>
-          <List.Item as='a' href='#'>Privacy Policy</List.Item>
-        </List>
-      </Container>
-    </Segment>
+    <footer className="footer">
+      <div className="container is-primary">
+        <div className="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+          </p>
+          <p>
+            <a className="icon" href="https://github.com/jgthms/bulma">
+              <i className="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
         )
     }
 }

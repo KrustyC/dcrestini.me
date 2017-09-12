@@ -2,6 +2,8 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import '../../assets/navbar.scss'
+
 export default class Navbar extends Component {
 
   render() {
@@ -9,15 +11,18 @@ export default class Navbar extends Component {
     const links = [
       {
         path: '/',
-        text: 'Home'
+        text: 'Home',
+        icon: 'fa fa-home'
       },
       {
         path: '/about',
-        text: 'About'
+        text: 'About',
+        icon: 'fab fa-linux'
       },
       {
         path: '/curriculum',
-        text: 'Curriculum'
+        text: 'Curriculum',
+        icon: 'fa fa-id-card'
       },
     ]
 
@@ -29,7 +34,11 @@ export default class Navbar extends Component {
           </a>
         </div>
           <div className="navbar-start">
-            { _.map(links, (x, k) => <Link key={k} className="navbar-item" to={x.path} > {x.text} </Link>) }
+            { _.map(links, (x, k) => (
+              <Link key={k} className="navbar-item" to={x.path} >
+              <i className={x.icon}/> &nbsp;{x.text}
+              </Link>)
+            ) }
           </div>
       </nav>
     )

@@ -16,7 +16,12 @@ const ExtractPlugin = new ExtractTextPlugin({
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/lib/fontawesome/solid.min.js',
+    './src/lib/fontawesome/brands.min.js',
+    './src/lib/fontawesome/fontawesome.min.js',
+    './src/index.js',
+  ],
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'

@@ -1,4 +1,19 @@
-$footer-color: #000;
+$footer-color: #fff;
+
+.tile.icon {
+  height: 100%;
+  text-align: center;
+  display: float;
+  align-items: middle;
+  svg {
+    margin-top: -9px !important;
+
+  }
+}
+
+.hero-body.about {
+   padding: 5rem !important;
+}
 
 .footer {
   background: $footer-color !important;

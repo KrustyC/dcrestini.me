@@ -6,6 +6,8 @@ import Header from './_header'
 import About from './_about'
 import Cv from './_cv'
 
+import '../../assets/home.scss'
+
 
 /*
 import Quote from './_quote'

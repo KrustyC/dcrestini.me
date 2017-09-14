@@ -14,7 +14,7 @@ class Interests extends Component {
 
   render(){
     return (
-     <section className="hero is-primary is-bold interests">
+     <section className="hero is-primary is-bold icon-menu">
       <div className="hero-header has-text-centered">
         <h1 className="title">Interests</h1>
       </div>

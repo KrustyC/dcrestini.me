@@ -1,26 +1,99 @@
 import React, { Component } from 'react'
 
 class Overview extends Component {
+
+  getData() {
+    return {
+      interests: [
+        { value:'Front-End Development', icon: 'fa fa-browser'},
+        { value:'Back-End Development', icon: 'fa fa-laptop'},
+        { value:'DevOps', icon: 'fa fa-cogs'}
+      ],
+      languages: [
+        { value:'JavaScript', icon: 'fab fa-js-square'},
+        { value:'Php', icon: 'fa fa-leaf'},
+        { value:'Python', icon: 'fab fa-python'}
+      ],
+      technologies: [
+        { value:'MySQL', icon: 'fa fa-database'},
+        { value:'Linux Platform', icon: 'fab fa-linux'},
+        { value:'Aws', icon: 'fab fa-aws'}
+      ]
+    }
+  }
+
   render(){
+    const { interests, languages, technologies } = this.getData()
+
     return (
-      <section className="hero is-medium is-bold">
-        <div className="hero-body about">
-          <div className="tile is-ancestor">
-            <div className="tile is-parent">
+     <section className="hero is-bold icon-menu">
+      <div className="hero-header has-text-centered">
+        <h1 className="title">Computer Science area of interest</h1>
+      </div>
+      <div className="hero-body">
+        <div className="container">
+          <div className="tile is-ancestor has-text-centered">
+          {
+            _.map( interests, x => (
               <div className="tile is-child has-text-centered">
-                <p className="title">Overview</p>
-                <p className="subtitle">A brief overview of my favourite technologies</p>
-                  <div className="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis posuere semper. Ut ornare, tellus eget aliquam semper, ipsum tortor fermentum libero, malesuada consectetur ex diam in neque. Vivamus sed lectus a nulla pellentesque suscipit. Integer commodo ante eu fringilla viverra. Aliquam elementum condimentum leo, sit amet feugiat augue interdum non. Donec et mi lobortis dolor cursus dictum. Morbi sit amet felis nibh. Vestibulum varius augue in lorem interdum cursus. Quisque ac tellus nibh. Pellentesque nec eros at velit tempor semper. Quisque gravida libero sed odio dictum, at tempor lacus consequat. Aliquam ut sem facilisis, congue augue nec, laoreet est. Quisque quis dolor at est feugiat dictum. Phasellus id interdum purus.
-                  </div>
-                    <a className="button is-primary is-outlined">
-                      <i className="fa fa-hand-point-right" /> &nbsp; Discover more
-                    </a>
+                <div className="content">
+                  <i className={`${x.icon} fa-5x`}/> 
+                </div>
+                <div className="content has-text-centered image">
+                  {x.value}
+                </div>
               </div>
-            </div>
+            ))
+          }
           </div>
         </div>
-      </section>
+        <div className="container intermediate">
+          <div className="tile is-ancestor has-text-centered">
+          {
+             _.map( languages, x => (
+              <div className="tile is-child has-text-centered">
+                <div className="content">
+                  <i className={`${x.icon} fa-5x`}/> 
+                </div>
+                <div className="content has-text-centered image">
+                  {x.value}
+                </div>
+              </div>
+            ))
+          }
+          </div>
+        </div>
+        <div className="container intermediate">
+          <div className="tile is-ancestor has-text-centered">
+          {
+            _.map( technologies, x => (
+              <div className="tile is-child has-text-centered">
+                <div className="content">
+                  <i className={`${x.icon} fa-5x`}/> 
+                </div>
+                <div className="content has-text-centered image">
+                  {x.value}
+                </div>
+              </div>
+            ))
+          }
+          </div>
+        </div>
+      </div>
+      <div className="hero-foot">
+        <div className="container">
+          <div className="tabs is-centered">
+            <ul>
+              <li>
+                <button className="button is-primary is-outlined is-inverted">
+                <i className="fa fa-hand-point-right" /> &nbsp; Find out more
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     )
   }
 }

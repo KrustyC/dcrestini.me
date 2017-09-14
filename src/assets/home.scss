@@ -13,7 +13,24 @@
    padding: 5rem !important;
 }
 
+.hero {
+  blockquote {
+    font-style: italic;
+  }
+
+  span.author {
+    float: right;
+    margin-right: 180px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
 .hero.interests {
+  .hero-header {
+    padding-top: 4em;
+  }
+
   .hero-foot {
     padding-top: 20px;
     padding-bottom: 2rem;

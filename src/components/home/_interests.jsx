@@ -15,6 +15,9 @@ class Interests extends Component {
   render(){
     return (
      <section className="hero is-primary is-bold interests">
+      <div className="hero-header has-text-centered">
+        <h1 className="title">Interests</h1>
+      </div>
       <div className="hero-body">
         <div className="container">
           <div className="tile is-ancestor has-text-centered">
@@ -39,7 +42,7 @@ class Interests extends Component {
             <ul>
               <li>
                 <button className="button is-primary is-outlined is-inverted">
-                <i className="fa fa-hand-point-right" /> &nbsp; Discover more about my interests
+                <i className="fa fa-hand-point-right" /> &nbsp; Find out more
                 </button>
               </li>
             </ul>

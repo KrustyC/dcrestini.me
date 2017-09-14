@@ -14,19 +14,23 @@
 }
 
 .footer {
-  padding-bottom: 4.5rem !important;
-  .social {
-    margin-top: 30px;
-    &:first-child {
-      margin-top: 0px;
-    }
-    a {
-      height: 50px;
-      text-align: left;
-      span.fa-layers-text {
-        left: 50;
+  padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  ul{
+    margin-top: 20px;
+    li {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0px;
+      }
+      a {
+        height: 50px;
         text-align: left;
-        width: 50px;
+        span.fa-layers-text {
+          left: 50;
+          text-align: left;
+          width: 50px;
+        }
       }
     }
   }

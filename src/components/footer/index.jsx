@@ -13,38 +13,54 @@ class About extends Component {
   render(){
    return (
     <footer className="footer">
-      <div className="container">
-        <div className="columns">
+      <div className="hero">
+        <div className="hero-body columns">
           <div className="column is-4">
-            <div className="tile is-vertical">
+            <div>
               <strong> Find me on </strong>
             </div>
-            <br/>
             <div>
-            {
-              _.map(this.getLinks(), x => (
-                <div className="social">
-                  <a className="social-link " href={x.link} target="_blank">
-                    <span className="fa-layers">
-                      <i
-                        style={{color: x.color}}
-                        className={`fab fa-${x.icon} fa-3x`}
-                        data-fa-transform="shrink-6"
-                        data-fa-compose="fa fa-circle"
-                      />
-                      <span className="fa-layers-text" data-fa-transform="shrink-1 right-75">{x.value}</span>
-                  </span>
-                  </a>
-                </div>
-              ))
-            }
+              <ul>
+              {
+                _.map(this.getLinks(), x => (
+                  <li>
+                    <a href={x.link} target="_blank">
+                      <span className="fa-layers">
+                        <i
+                          style={{color: x.color}}
+                          className={`fab fa-${x.icon} fa-2x`}
+                          data-fa-transform="shrink-6"
+                          data-fa-compose="fa fa-circle"
+                        />
+                        <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">{x.value}</span>
+                    </span>
+                    </a>
+                  </li>
+                ))
+              }
+              </ul>
             </div>
           </div>
+          
           <div className="column is-4">
-            
+            <div>
+              <strong> Get in touch </strong>
+            </div>
+            <div>
+              <ul>
+                <li> <i className="fa fa-envelope"/> davide.crestini94@gmail.com </li>
+                <li> <i className="fa fa-phone"/> +44 0774 5149793 </li>
+              </ul>
+            </div>
           </div>
-          <div className="column is-4">
-           
+        </div>
+        <div className="hero-foot">
+          <div className="container">
+            <div className="has-text-centered">
+              Copyright © 2017 Davide Crestini
+              <br/>
+              <small>HTML5 | CSS3 | JavaScript | NodeJs | PHP | Front-End Development | Back-End Development | DevOps </small>
+            </div>
           </div>
         </div>
       </div>

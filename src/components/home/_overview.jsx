@@ -26,9 +26,9 @@ class Overview extends Component {
     const { interests, languages, technologies } = this.getData()
 
     return (
-     <section className="hero is-bold icon-menu">
+     <section className="hero is-primary is-bold icon-menu">
       <div className="hero-header has-text-centered">
-        <h1 className="title">Computer Science area of interest</h1>
+        <h1 className="title">Overview</h1>
       </div>
       <div className="hero-body">
         <div className="container">
@@ -85,7 +85,7 @@ class Overview extends Component {
           <div className="tabs is-centered">
             <ul>
               <li>
-                <button className="button is-primary is-outlined">
+                <button className="button is-primary is-outlined is-inverted">
                 <i className="fa fa-id-card" /> &nbsp; Portfolio
                 </button>
               </li>

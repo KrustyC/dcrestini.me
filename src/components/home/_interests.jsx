@@ -5,7 +5,6 @@ class Interests extends Component {
   
   getInterests() {
     return [
-      { value:'Coding', icon: 'fa fa-code'},
       { value:'Sport', icon: 'fa fa-futbol'},
       { value:'Travelling', icon: 'fa fa-globe'},
       { value:'Food', icon: 'fa fa-utensils'}
@@ -14,7 +13,7 @@ class Interests extends Component {
 
   render(){
     return (
-     <section className="hero is-primary is-bold icon-menu">
+     <section className="hero is-bold icon-menu">
       <div className="hero-header has-text-centered">
         <h1 className="title">Interests</h1>
       </div>
@@ -33,19 +32,6 @@ class Interests extends Component {
               </div>
             ))
           }
-          </div>
-        </div>
-      </div>
-      <div className="hero-foot">
-        <div className="container">
-          <div className="tabs is-centered">
-            <ul>
-              <li>
-                <button className="button is-primary is-outlined is-inverted">
-                <i className="fa fa-hand-point-right" /> &nbsp; Find out more
-                </button>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ class HeaderSection extends Component {
             Hello! I'm Davide Crestini and I'm a software developer.
           </h3>
           <h2 className="subtitle is-4">
-            This is my own website, and you are very welcome here!
+            This is my own website, look at what I've been doing, I hope you'll enjoy it!
           </h2>
         </div>
       </div>

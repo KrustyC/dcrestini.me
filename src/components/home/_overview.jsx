@@ -85,8 +85,8 @@ class Overview extends Component {
           <div className="tabs is-centered">
             <ul>
               <li>
-                <button className="button is-primary is-outlined is-inverted">
-                <i className="fa fa-hand-point-right" /> &nbsp; Find out more
+                <button className="button is-primary is-outlined">
+                <i className="fa fa-id-card" /> &nbsp; Portfolio
                 </button>
               </li>
             </ul>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Cv extends Component {
+class Portfolio extends Component {
   render(){
     return (
      <section className="hero is-info is-bold">
       <div className="hero-body">
         <div className="container">
           <h1 className="title">
-            My cv?
+            My Portfolio?
           </h1>
           <h2 className="subtitle">
             It's just brilliant
@@ -19,4 +19,4 @@ class Cv extends Component {
   }
 }
 
-export default Cv
+export default Portfolio

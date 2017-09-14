@@ -20,8 +20,8 @@ export default class Navbar extends Component {
         icon: 'fab fa-linux'
       },
       {
-        path: '/curriculum',
-        text: 'Curriculum',
+        path: '/portfolio',
+        text: 'Portfolio',
         icon: 'fa fa-id-card'
       },
     ]

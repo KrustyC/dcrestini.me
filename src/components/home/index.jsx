@@ -4,23 +4,16 @@ import '../../assets/home.scss'
 
 import Header from './_header'
 import About from './_about'
-import Cv from './_cv'
+import Portfolio from './_portfolio'
 
 import '../../assets/home.scss'
 
-
-/*
-import Quote from './_quote'
-    <About />
-    <Quote />
-    <Cv />
-*/
 
 const Home = () => (
   <div>
     <Header />
     <About />
-    <Cv />
+    <Portfolio />
   </div>
 
 )

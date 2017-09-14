@@ -5,12 +5,12 @@ class HeaderSection extends Component {
    return (
     <section className="hero is-large is-primary is-bold">
       <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            Welcome
-          </h1>
-          <h2 className="subtitle">
-            My name is Davide Crestini and I'm a software developer...
+        <div className="container has-text-centered">
+          <h3 className="title is-2">
+            Hello! I'm Davide Crestini and I'm a software developer.
+          </h3>
+          <h2 className="subtitle is-4">
+            This is my own website, and you are very welcome here!
           </h2>
         </div>
       </div>

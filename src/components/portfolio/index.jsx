@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
-class Curriculum extends Component {
+class Portfolio extends Component {
   render(){
    return (
     <div className="container">
       <div className="tile is-ancestor">
-        CURRICULUM
+        Portfolio
       </div>
     </div>
     )
   }
 }
 
-export default Curriculum
+export default Portfolio
 
 

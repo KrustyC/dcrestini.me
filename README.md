@@ -12,13 +12,13 @@ This website has been built using [React](https://reactjs.org/) as a JavaScript 
 
 ## Development
 Once clone the repo run `yarn install` to install all the dependencies.
-To run the project in development mode just run `yarn dev` and the go to [localhost:8080](http://localhost:8080).
+To run the project in development mode just run `yarn dev` and then open your browser at [localhost:8080](http://localhost:8080).
 
 ## Testing
 I'd like to add test in a future, but for the moment there is nothing to test, so I think is not worth :)
 
 ## Linting
-This repo will follow the airbnb linting style 
+This repo will follow the [airbnb linting style](https://github.com/airbnb/javascript).
 
 ## Contributors
 I'll be the only contributor but as I said above, if you want to use this project as a starting point for your own website please feel free to fork the repo :)

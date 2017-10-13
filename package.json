@@ -6,7 +6,8 @@
   "author": "davide.crestini94@gmail.com",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server  --content-base bundle"
+    "start": "webpack-dev-server  --content-base bundle",
+    "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "bulma": "^0.5.1",

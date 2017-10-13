@@ -34,8 +34,8 @@ class Overview extends Component {
         <div className="container">
           <div className="tile is-ancestor has-text-centered">
           {
-            _.map( interests, x => (
-              <div className="tile is-child has-text-centered">
+            _.map( interests, (x, k) => (
+              <div key={k} className="tile is-child has-text-centered">
                 <div className="content">
                   <i className={`${x.icon} fa-5x`}/> 
                 </div>
@@ -50,8 +50,8 @@ class Overview extends Component {
         <div className="container intermediate">
           <div className="tile is-ancestor has-text-centered">
           {
-             _.map( languages, x => (
-              <div className="tile is-child has-text-centered">
+             _.map( languages, (x, k) => (
+              <div key={k} className="tile is-child has-text-centered">
                 <div className="content">
                   <i className={`${x.icon} fa-5x`}/> 
                 </div>
@@ -66,8 +66,8 @@ class Overview extends Component {
         <div className="container intermediate">
           <div className="tile is-ancestor has-text-centered">
           {
-            _.map( technologies, x => (
-              <div className="tile is-child has-text-centered">
+            _.map( technologies, (x, k) => (
+              <div key={k} className="tile is-child has-text-centered">
                 <div className="content">
                   <i className={`${x.icon} fa-5x`}/> 
                 </div>

@@ -1,57 +1,46 @@
+import _ from 'lodash'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment, Button } from 'semantic-ui-react'
+
+import '../../assets/navbar.scss'
 
 export default class Navbar extends Component {
-  
-  constructor() {
-    super()
-    this.state = {
-      activeItem: 'home'
-    }
-    
-  }
-
-  handleItemClick (e, { name }) {
-    this.setState({ activeItem: name })
-  }
 
   render() {
-    const { activeItem } = this.state
+
+    const links = [
+      {
+        path: '/',
+        text: 'Home',
+        icon: 'fa fa-home'
+      },
+      {
+        path: '/about',
+        text: 'About',
+        icon: 'fab fa-linux'
+      },
+      {
+        path: '/portfolio',
+        text: 'Portfolio',
+        icon: 'fa fa-id-card'
+      },
+    ]
 
     return (
-       <Menu fixed='top' inverted className="navbar">
-      <Container>
-        <Menu.Item as='a' header>
-          <Image
-            size='mini'
-            src='/logo.png'
-            style={{ marginRight: '1.5em' }}
-          />
-          Project Name
-        </Menu.Item>
-        <Menu.Item as={Link} to='/'>Home</Menu.Item>
-        <Menu.Item as={Link} to='/about'>About</Menu.Item>
-
-        <Dropdown item simple text='Dropdown'>
-          <Dropdown.Menu>
-            <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Header>Header Item</Dropdown.Header>
-            <Dropdown.Item>
-              <i className='dropdown icon' />
-              <span className='text'>Submenu</span>
-              <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Item>List Item</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Container>
-    </Menu>
+      <nav className="navbar" role="navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="http://bulma.io">
+            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+          </a>
+        </div>
+          <div className="navbar-start">
+            { _.map(links, (x, k) => (
+              <Link key={k} className="navbar-item" to={x.path} >
+              <i className={x.icon}/> &nbsp;{x.text}
+              </Link>)
+            ) }
+          </div>
+      </nav>
     )
   }
 }

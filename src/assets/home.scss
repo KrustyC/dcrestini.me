@@ -1,0 +1,66 @@
+.tile.icon {
+  height: 100%;
+  text-align: center;
+  display: float;
+  align-items: middle;
+  svg {
+    margin-top: -9px !important;
+
+  }
+}
+
+.hero-body.about {
+   padding: 5rem !important;
+}
+
+.hero {
+  blockquote {
+    font-style: italic;
+  }
+
+  span.author {
+    float: right;
+    margin-right: 180px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .hero-foot {
+    padding-top: 20px;
+    padding-bottom: 2rem;
+  }
+}
+
+.hero.icon-menu {
+  .hero-header {
+    padding-top: 4em;
+  }
+
+  .container.intermediate {
+    padding-top: 80px;
+  }
+}
+
+
+.footer {
+  padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  ul{
+    margin-top: 20px;
+    li {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0px;
+      }
+      a {
+        height: 50px;
+        text-align: left;
+        span.fa-layers-text {
+          left: 50;
+          text-align: left;
+          width: 50px;
+        }
+      }
+    }
+  }
+}

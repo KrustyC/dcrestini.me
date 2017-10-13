@@ -1,6 +1,7 @@
 import React from 'react'
+
 import Navbar from './navbar'
-import Main from './main.jsx'
+import Main from './main'
 import Footer from './footer'
 
 const App = () => (

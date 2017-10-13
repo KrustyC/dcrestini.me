@@ -1,39 +1,28 @@
 import React, { Component } from 'react'
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment, Button, Icon } from 'semantic-ui-react'
 
 class About extends Component {
   render(){
    return (
-      <Segment style={{ padding: '8em 0em' }} vertical>
-        <Grid container stackable verticalAlign='middle'>
-          <Grid.Row>
-            <Grid.Column width={8}>
-              <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
-              <p style={{ fontSize: '1.33em' }}>
-                We can give your company superpowers to do things that they never thought possible. Let us delight
-                your customers and empower your needs... through pure data analytics.
-              </p>
-              <Header as='h3' style={{ fontSize: '2em' }}>We Make Bananas That Can Dance</Header>
-              <p style={{ fontSize: '1.33em' }}>
-                Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
-              </p>
-            </Grid.Column>
-            <Grid.Column floated='right' width={6}>
-              <Image
-                bordered
-                rounded
-                size='large'
-                src='/assets/images/wireframe/white-image.png'
-              />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column textAlign='center'>
-              <Button size='huge'>Check Them Out</Button>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Segment>
+     <section className="hero is-medium is-bold">
+      <div className="hero-body about">
+        <div className="tile is-ancestor">
+          <div className="tile is-parent">
+            <div className="tile is-child is-2 icon">
+                <i className="fa fa-address-card fa-7x" />
+            </div>
+            <div className="tile is-child">
+              <p className="title">About me</p>
+                <div className="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis posuere semper. Ut ornare, tellus eget aliquam semper, ipsum tortor fermentum libero, malesuada consectetur ex diam in neque. Vivamus sed lectus a nulla pellentesque suscipit. Integer commodo ante eu fringilla viverra. Aliquam elementum condimentum leo, sit amet feugiat augue interdum non. Donec et mi lobortis dolor cursus dictum. Morbi sit amet felis nibh. Vestibulum varius augue in lorem interdum cursus. Quisque ac tellus nibh. Pellentesque nec eros at velit tempor semper. Quisque gravida libero sed odio dictum, at tempor lacus consequat. Aliquam ut sem facilisis, congue augue nec, laoreet est. Quisque quis dolor at est feugiat dictum. Phasellus id interdum purus.
+                </div>
+                  <a className="button is-primary is-outlined">
+                    <i className="fa fa-hand-point-right" /> &nbsp; Discover more
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     )
   }
 }

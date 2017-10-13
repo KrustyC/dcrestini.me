@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
+import '../../assets/home.scss'
+
 
 import Header from './_header'
 import About from './_about'
+import Interesets from './_interests'
+import Overview from './_overview'
 import Quote from './_quote'
-import Cv from './_cv'
+
+import '../../assets/home.scss'
 
 
 const Home = () => (
   <div>
     <Header />
     <About />
+    <Overview />
+    <Interesets />
     <Quote />
-    <Cv />
   </div>
 
 )

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/index.html',
+  template: './index.html',
   filename: 'index.html',
   inject: 'body'
 })
@@ -16,10 +16,18 @@ const ExtractPlugin = new ExtractTextPlugin({
 
 
 module.exports = {
-  entry: './src/index.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: {
+    app: [
+      './lib/fontawesome/solid.min.js',
+      './lib/fontawesome/brands.min.js',
+      './lib/fontawesome/fontawesome.min.js',
+      './index.js'
+    ]
+  },
   output: {
-    path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js'
   },
   resolve : {
     alias: {
@@ -40,7 +48,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css|scss$/,
+        test: /\.css|(sass|scss)$/,
         loaders: 'style-loader!css-loader!sass-loader'
       },
       {

@@ -29,15 +29,17 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar" role="navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="#">
-          </a>
-        </div>
-          <div className="navbar-start">
             { _.map(links, (x, k) => (
               <Link key={k} className="navbar-item" to={x.path} >
-              <i className={x.icon}/> &nbsp;{x.text}
+                {x.text}
               </Link>)
             ) }
+          
+           <div className="navbar-burger burger" data-target="navMenuTransparentExample">
+            <span/>
+            <span/>
+            <span/>
+           </div>
           </div>
       </nav>
     )

@@ -35,7 +35,7 @@ export default class Navbar extends Component {
               </Link>)
             ) }
           
-           <div className="navbar-burger burger" data-target="navMenuTransparentExample">
+           <div className="navbar-burger burger">
             <span/>
             <span/>
             <span/>

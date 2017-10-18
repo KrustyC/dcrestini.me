@@ -29,8 +29,7 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar" role="navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="http://bulma.io">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+          <a className="navbar-item" href="#">
           </a>
         </div>
           <div className="navbar-start">

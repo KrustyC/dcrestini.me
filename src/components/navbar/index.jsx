@@ -30,7 +30,7 @@ export default class Navbar extends Component {
       <nav className="navbar" role="navigation">
         <div className="navbar-brand">
             { _.map(links, (x, k) => (
-              <Link key={k} className="navbar-item" to={x.path} >
+              <Link key={k} className="navbar-item is-hidden-mobile" to={x.path} >
                 {x.text}
               </Link>)
             ) }

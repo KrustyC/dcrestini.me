@@ -32,7 +32,9 @@ class About extends Component {
                           data-fa-transform="shrink-6"
                           data-fa-compose="fa fa-circle"
                         />
-                        <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">{x.value}</span>
+                        <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">
+                          {x.value}
+                        </span>
                     </span>
                     </a>
                   </li>
@@ -57,7 +59,7 @@ class About extends Component {
         <div className="hero-foot">
           <div className="container">
             <div className="has-text-centered">
-              Davide Crestini
+              Made by Davide Crestini
               <br/>
               <small>HTML5 | CSS3 | JavaScript | NodeJs | PHP | Python| Front-End Development | Back-End Development | DevOps </small>
             </div>

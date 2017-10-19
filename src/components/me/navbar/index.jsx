@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import '../../assets/navbar.scss'
+import './navbar.scss'
 
 export default class Navbar extends Component {
 

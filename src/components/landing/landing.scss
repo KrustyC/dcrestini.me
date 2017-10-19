@@ -1,0 +1,30 @@
+html, body {
+  ::-webkit-scrollbar {
+    display: none; 
+  }
+
+  height: 100%;
+  overflow-y:hidden;
+  .hero {
+    background-image: -ms-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
+    background-image: -moz-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
+    background-image: -o-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(38, #55CF9A), color-stop(62, #719FBD));
+    background-image: -webkit-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
+    background-image: linear-gradient(to bottom right, #55CF9A 38%, #719FBD 62%);
+    
+    .has-button {
+      padding-top: 150px;
+    }
+
+    .row {
+      i {
+        display: inline-block;
+      }
+      p {
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+  }
+}

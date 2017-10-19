@@ -32,7 +32,9 @@ class About extends Component {
                           data-fa-transform="shrink-6"
                           data-fa-compose="fa fa-circle"
                         />
-                        <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">{x.value}</span>
+                        <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">
+                          {x.value}
+                        </span>
                     </span>
                     </a>
                   </li>
@@ -49,7 +51,7 @@ class About extends Component {
             <div>
               <ul>
                 <li> <i className="fa fa-envelope"/> davide.crestini94@gmail.com </li>
-                <li> <i className="fa fa-phone"/> +44 0774 5149793 </li>
+                <li> <i className="fa fa-phone"/> +44 07745 149793 </li>
               </ul>
             </div>
           </div>
@@ -57,9 +59,9 @@ class About extends Component {
         <div className="hero-foot">
           <div className="container">
             <div className="has-text-centered">
-              Copyright © 2017 Davide Crestini
+              Made by Davide Crestini
               <br/>
-              <small>HTML5 | CSS3 | JavaScript | NodeJs | PHP | Front-End Development | Back-End Development | DevOps </small>
+              <small>HTML5 | CSS3 | JavaScript | NodeJs | PHP | Python| Front-End Development | Back-End Development | DevOps </small>
             </div>
           </div>
         </div>

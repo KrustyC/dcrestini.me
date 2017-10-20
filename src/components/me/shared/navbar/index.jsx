@@ -10,7 +10,7 @@ export default class Navbar extends Component {
 
     const links = [
       {
-        path: '/me',
+        path: '/',
         text: 'Home',
         icon: 'fa fa-home'
       },
@@ -20,7 +20,7 @@ export default class Navbar extends Component {
         icon: 'fab fa-linux'
       },
       {
-        path: '/me/portfolio',
+        path: '/me/portfolios',
         text: 'Portfolio',
         icon: 'fa fa-id-card'
       },

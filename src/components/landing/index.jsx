@@ -5,7 +5,7 @@ import './landing.scss'
 class Landing extends Component {
   render(){
    return (
-    <div className="hero is-large is-bold">
+    <div className="landing hero is-large is-bold">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h3 className="title is-2 has-text-light">
@@ -17,10 +17,9 @@ class Landing extends Component {
         </div>
 
         <div className="row has-text-centered has-button has-text-light">
-          <i className="fa fa-wrench fa-2x"/>
-          <p className="subtitle is-5 has-text-light">
-            <Link to="/me"> Work in progress... </Link>
-          </p>
+          <Link to="/me/about" className="button is-outlined is-primary is-inverted is-large">
+            <i className="fa fa-wrench"/>&nbsp;Work in progress... 
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Landing from './landing'
 import Me from './me'
@@ -9,6 +9,7 @@ const App = () => (
     <div>
       <Route exact path="/" component={Landing} />
       <Route path='/me' component={Me} />
+      <Route path='*' component={() => (<h1> Not Found </h1>)} />
     </div>
   </Router>
 )

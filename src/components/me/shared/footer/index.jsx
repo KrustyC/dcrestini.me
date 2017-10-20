@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 
-class About extends Component {
+class Footer extends Component {
   getLinks() {
     return [ 
       { value: 'GitHub', icon: 'github', link: 'https://github.com/KrustyC', color: '#333333'},
@@ -22,8 +22,8 @@ class About extends Component {
             <div>
               <ul>
               {
-                _.map(this.getLinks(), x => (
-                  <li>
+                _.map(this.getLinks(), (x, k) => (
+                  <li key={k}>
                     <a href={x.link} target="_blank">
                       <span className="fa-layers">
                         <i
@@ -71,4 +71,4 @@ class About extends Component {
     }
 }
 
-export default About
+export default Footer

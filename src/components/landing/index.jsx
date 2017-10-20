@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 import './landing.scss'
 
 class Landing extends Component {
@@ -19,7 +19,7 @@ class Landing extends Component {
         <div className="row has-text-centered has-button has-text-light">
           <i className="fa fa-wrench fa-2x"/>
           <p className="subtitle is-5 has-text-light">
-            Work in progress...
+            <Link to="/me"> Work in progress... </Link>
           </p>
         </div>
       </div>

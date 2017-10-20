@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class HeaderSection extends Component {
+class Header extends Component {
   render(){
    return (
     <section className="hero is-large is-primary is-bold">
@@ -19,4 +19,4 @@ class HeaderSection extends Component {
   }
 }
 
-export default HeaderSection
+export default Header

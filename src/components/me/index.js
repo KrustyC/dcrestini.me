@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navbar from './navbar'
 import Home from './home'
 import Footer from './footer'
 
-// CREARE LAYOUT
+const Me = () => (
+  <div>
+    <Navbar/>
 
-class Me extends Component {
-  render(){
-   return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={Home}/>
-      </Switch>
-    </div>
-    )
-  }
-}
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+      </div>
+    </Router>
+
+    <Footer/>
+  </div>
+)
 
 export default Me

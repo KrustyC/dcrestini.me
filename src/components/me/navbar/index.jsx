@@ -10,17 +10,17 @@ export default class Navbar extends Component {
 
     const links = [
       {
-        path: '/',
+        path: '/me',
         text: 'Home',
         icon: 'fa fa-home'
       },
       {
-        path: '/about',
+        path: '/me/about',
         text: 'About',
         icon: 'fab fa-linux'
       },
       {
-        path: '/portfolio',
+        path: '/me/portfolio',
         text: 'Portfolio',
         icon: 'fa fa-id-card'
       },

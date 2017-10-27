@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Landing from './landing'
 import Me from './me'
+import '../assets/scss/main.scss'
 
 const App = () => (
   <Router>

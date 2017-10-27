@@ -1,14 +1,27 @@
-.landing.hero {
+.landing {
   display: flex;
   height: 100vh;
+  font-family: 'Munro';
+  background: #000000;
+  color: #FFFFFF;
 
-  background-image: -ms-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
-  background-image: -moz-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
-  background-image: -o-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(38, #55CF9A), color-stop(62, #719FBD));
-  background-image: -webkit-linear-gradient(top left, #55CF9A 38%, #719FBD 62%);
-  background-image: linear-gradient(to bottom right, #55CF9A 38%, #719FBD 62%);
+  .container {
+    border: 3px solid #FFF;
+    margin: 16em;
+    padding: 2em;
+  }
+  .header {
+    font-size: 28px;
+    span {
+      color: #0066cc;
+    }
+  }
   
+  h3 {
+    color: #00cc00 !important;
+    width: 400px;
+  }
+
   .has-button {
     padding-top: 150px;
   }

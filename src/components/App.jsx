@@ -7,11 +7,11 @@ import '../assets/scss/main.scss'
 
 const App = () => (
   <Router>
-    <div>
+    <Switch>
       <Route exact path="/" component={Landing} />
       <Route path='/me' component={Me} />
       <Route path='*' component={() => (<h1> Not Found </h1>)} />
-    </div>
+    </Switch>
   </Router>
 )
 

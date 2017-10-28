@@ -3,10 +3,11 @@ body {
 }
 
 .landing {
-  padding: 7em;
+  padding: 5em;
   .terminal {
+    box-shadow: 0px 10px 6px -6px grey;
     border: 1px solid #FFF;
-    width: 80em;
+    width: 50em;
     height: 35em;
     font-size: 20px;
     border-top-right-radius: 8px;
@@ -15,7 +16,7 @@ body {
       width: 100%;
       box-sizing: border-box;
       height: 6%;
-      background-color: #bbb;
+      background: hsl(0, 0%, 96%);
       margin: 0 auto;
       border-top-right-radius: inherit;
       border-top-left-radius: inherit;
@@ -98,6 +99,9 @@ body {
         }
       }
     }
+  }
+  .btn-container {
+    padding-top: 20px;
   }
 }
 

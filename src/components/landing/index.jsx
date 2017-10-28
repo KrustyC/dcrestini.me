@@ -8,7 +8,7 @@ class Landing extends Component {
     super()
 
     this.state = {
-      command: 'Dio mostro'
+      command: 'Prova'
     }
   }
 
@@ -22,9 +22,9 @@ class Landing extends Component {
     const history = [
       '1994 - Born in Sansepolcro',
       '1995 - Started supporting Juventus',
-      '2001 - Started using my first computer',
+      '2001 - Used computer for the first time',
       '2002 - Joined my first Basketball team',
-      '2006 - italy won the Wolrd Cup!',
+      '2006 - Italy won the World Cup!',
       '2009 - Met my fantastic girlfriend <3',
       '2010 - Started coding...',
       '2013 - Graduated at business at technical school',
@@ -45,13 +45,13 @@ class Landing extends Component {
         <div className="terminal-screen">
           <p className="text">Hello!</p>
           <p className="command">dcrestini:~$ <span>whoami</span></p>
-          <p className="text">I'm Davide Crestini and I'm a software developer!</p>
+          <p className="text">My name is Davide Crestini and I'm a software developer!</p>
           <p className="command">dcrestini:~$ <span>history</span></p>
           <p className="text">
             {_.map(history, x => <span>{x}<br/></span>)}
           </p>
           <p className="command">dcrestini:~$ <span>man website</span></p>
-          <p className="text">Please type "enter" to visit my website</p>
+          <p className="text">To visit my website please type "enter" or click the button below</p>
           <p className="command with-cursor">
             dcrestini:~$
             <span
@@ -64,6 +64,9 @@ class Landing extends Component {
             </span>
           </p>
         </div>
+      </div>
+      <div className="container btn-container has-text-centered">
+        <button className="button is-primary">To the website</button>
       </div>
     </div>
     )

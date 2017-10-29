@@ -49,11 +49,17 @@ class Landing extends Component {
             {_.map(history, (x, k) => <span key={k}>{x}<br/></span>)}
           </p>
           <p className="command">dcrestini:~$ <span>man website</span></p>
-          <p className="text">[?] To visit the website just press "Enter[↵]"</p>
+          <p className="text is-hidden-mobile">[?] To visit the website just press "Enter[↵]"</p>
+          <p className="text is-hidden-desktop">[?] To visit the website just press the button below</p>
           <p className="command with-cursor">
             dcrestini:~$
           </p>
         </div>
+      </div>
+      <div className="container btn-container has-text-centered is-hidden-desktop">
+        <Link to="/me/about" className="button is-primary is-inverted is-outlined is-large">
+          <i className="fa fa-hand-point-right" />&nbsp;View website
+        </Link>
       </div>
     </div>
     )

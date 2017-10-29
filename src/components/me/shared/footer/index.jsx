@@ -35,7 +35,7 @@ class Footer extends Component {
                         <span className="fa-layers-text" data-fa-transform="shrink-1 right-55">
                           {x.value}
                         </span>
-                    </span>
+                      </span>
                     </a>
                   </li>
                 ))

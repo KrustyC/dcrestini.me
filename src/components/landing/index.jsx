@@ -1,24 +1,23 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, browserHistory } from 'react-router-dom'
 import './landing.scss'
 
 class Landing extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      command: 'Prova'
+  
+   onKeyPress(event){
+    if(event.keyCode === 13) {
+      console.log("Press enter button! Redirect...")
+      this.props.history.push('/me/about')
+      //browserHistory.push('/me/about')
     }
   }
 
-  onChange(e,val) {
-    console.log(e, val)
+  componentDidMount(){
+    document.addEventListener("keydown", (e) => this.onKeyPress(e));
   }
 
   render(){
-    const { command } = this.state
-
     const history = [
       '1994 - Born in Sansepolcro',
       '1995 - Started supporting Juventus',
@@ -28,14 +27,14 @@ class Landing extends Component {
       '2009 - Met my fantastic girlfriend <3',
       '2010 - Started coding...',
       '2013 - Graduated at business at technical school',
-      '2016 - Bachelor degree in Computer Science at University of Bologna',
+      '2016 - BA in Computer Science at University of Bologna',
       '2017 - Move to London',
       '2017 - Started Working at School Explained'
     ]
 
 
    return (
-    <div className="landing">
+    <div className="landing is-primary">
       <div className="container terminal">
         <div className="terminal-menu">
           <div className="terminal-buttons btn-close" />
@@ -43,30 +42,18 @@ class Landing extends Component {
           <div className="terminal-buttons btn-zoom" />
         </div>
         <div className="terminal-screen">
-          <p className="text">Hello!</p>
           <p className="command">dcrestini:~$ <span>whoami</span></p>
-          <p className="text">My name is Davide Crestini and I'm a software developer!</p>
+          <p className="text">Hello! My name is Davide Crestini and I'm a software developer!</p>
           <p className="command">dcrestini:~$ <span>history</span></p>
           <p className="text">
-            {_.map(history, x => <span>{x}<br/></span>)}
+            {_.map(history, (x, k) => <span key={k}>{x}<br/></span>)}
           </p>
           <p className="command">dcrestini:~$ <span>man website</span></p>
-          <p className="text">To visit my website please type "enter" or click the button below</p>
+          <p className="text">[?] To visit the website just press "Enter[↵]"</p>
           <p className="command with-cursor">
             dcrestini:~$
-            <span
-              className="content-editable" contenteditable="true"
-              role="input"
-              tabIndex="0"
-              onChange={(e) => this.onChange(e)}
-            >
-              {command}
-            </span>
           </p>
         </div>
-      </div>
-      <div className="container btn-container has-text-centered">
-        <button className="button is-primary">To the website</button>
       </div>
     </div>
     )

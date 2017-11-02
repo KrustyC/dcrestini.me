@@ -4,16 +4,11 @@
 #
 version: 2
 jobs:
-  build:
+  build-job:
     docker:
       - image: circleci/node:8.4
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+    working_directory: /tmp/personal-website
 
     steps:
       - checkout
@@ -27,8 +22,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
-
       - save_cache:
           paths:
             - node_modules
@@ -37,10 +30,27 @@ jobs:
       # run build
       - run: yarn build
 
-  deployment:
-    prod:
-      branch: master
-      commands:
-        - aws s3 sync /home/ubuntu/personal-website/ s3://dc-personal-website --delete
+  deploy-job:
+    docker:
+      - image: circleci/node:8.4
+    steps:
+      - run:
+          name: Install some stuff
+          command: <do-some-stuff>
+      - run:
+          name: Deploy if tests pass and branch is Master
+          command: aws s3 sync /tmp/personal-website/ s3://dc-personal-website --delete
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build-job
+      - deploy-job:
+          requires:
+            - build-job
+          filters:
+            branches:
+              only: master
 
 

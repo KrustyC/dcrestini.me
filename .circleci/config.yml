@@ -37,8 +37,8 @@ jobs:
       - run:
           name: Deploy to S3 if tests pass and branch is Master
           command: |
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python get-pip.py --user
+            sudo apt-get install python-setuptools
+            sudo easy_install pip
             pip install awscli --upgrade --user
             aws s3 sync /tmp/personal-website/ s3://dc-personal-website --delete
 

@@ -37,4 +37,10 @@ jobs:
       # run build
       - run: yarn build
 
+  deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 sync /home/ubuntu/personal-website/ s3://dc-personal-website --delete
+
 

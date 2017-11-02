@@ -33,10 +33,14 @@ jobs:
   deploy-job:
     docker:
       - image: circleci/node:8.4
+    working_directory: /tmp/personal-website
     steps:
       - run:
-          name: Deploy if tests pass and branch is Master
-          command: aws s3 sync /tmp/personal-website/ s3://dc-personal-website --delete
+        name: Install awscli
+        command: pip install awscli --upgrade --user
+      - run:
+          name: Deploy to S3 if tests pass and branch is Master
+          command: aws s3 sync ./build s3://dc-personal-website --delete
 
 workflows:
   version: 2

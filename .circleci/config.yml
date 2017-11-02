@@ -35,9 +35,6 @@ jobs:
       - image: circleci/node:8.4
     steps:
       - run:
-          name: Install some stuff
-          command: <do-some-stuff>
-      - run:
           name: Deploy if tests pass and branch is Master
           command: aws s3 sync /tmp/personal-website/ s3://dc-personal-website --delete
 

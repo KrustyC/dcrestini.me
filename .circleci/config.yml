@@ -30,7 +30,7 @@ jobs:
 
   deploy-job:
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/node:8.4
     steps:
       - checkout
       - run:

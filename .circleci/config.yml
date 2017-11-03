@@ -39,6 +39,7 @@ jobs:
           name: Deploy to S3 if tests pass and branch is Master
           command: |
             sudo apt-get -y -qq install awscli
+            yarn build
             aws s3 sync personal-website/dist s3://dc-personal-website --delete
 
 workflows:

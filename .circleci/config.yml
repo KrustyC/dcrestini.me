@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Deploy to S3 if tests pass and branch is Master
           command: |
-            sudo apt-get install python-dev
+            sudo apt-get install python-dev python-pip
             sudo pip install awscli
             yarn install
             yarn build

@@ -32,7 +32,7 @@ jobs:
 
   deploy-job:
     docker:
-      - image: circleci/python:3.6.2-stretch-browser
+      - image: circleci/python:3.6.2
     steps:
       - run:
           name: Deploy to S3 if tests pass and branch is Master

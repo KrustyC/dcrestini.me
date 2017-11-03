@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/node:8.4
 
-    working_directory: /tmp/personal-website
+    working_directory: ~/davidec
 
     steps:
       - checkout
@@ -33,14 +33,12 @@ jobs:
   deploy-job:
     docker:
       - image: circleci/python:3.6.2
-    working_directory: /tmp/personal-website
     steps:
       - run:
           name: Deploy to S3 if tests pass and branch is Master
           command: |
             sudo apt-get -y -qq install awscli
-            yarn build
-            aws s3 sync personal-website/dist s3://dc-personal-website --delete
+            aws s3 sync ~/davidec s3://dc-personal-website --delete
 
 workflows:
   version: 2

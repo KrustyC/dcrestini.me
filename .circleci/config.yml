@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/node:8.4
 
-    working_directory: ~/davidec
+    working_directory: ~/
 
     steps:
       - checkout
@@ -42,7 +42,7 @@ jobs:
             sudo apt-get -y -qq install awscli
             yarn install
             yarn build
-            aws s3 sync ~/ s3://dc-personal-website --delete
+            aws s3 sync ~/project s3://dc-personal-website --delete
 
 workflows:
   version: 2

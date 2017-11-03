@@ -8,8 +8,6 @@ jobs:
     docker:
       - image: circleci/node:8.4
 
-    working_directory: ~/
-
     steps:
       - checkout
 
@@ -33,7 +31,6 @@ jobs:
   deploy-job:
     docker:
       - image: circleci/node:8.4
-    working-directory: ~/
     steps:
       - checkout
       - run:

@@ -10,7 +10,7 @@ export default () => (
           Work in progress... the website we'll be available soon! :)
         </h2>
         <Link to="/" className="button is-primary is-inverted is-outlined is-large">
-          <i className="fa fa-home" />{' '}Back to website
+          <i className="fa fa-home" />{' '}To the website
         </Link>
       </div>
     </div>

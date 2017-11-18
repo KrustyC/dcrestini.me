@@ -1,6 +1,6 @@
 const path = require('path');
 
-
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -12,6 +12,12 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const ExtractPlugin = new ExtractTextPlugin({
   filename: '[name].[contenthash].css'
+})
+
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
+const DefinePlugin = new webpack.DefinePlugin({
+  'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
 })
 
 
@@ -26,6 +32,7 @@ module.exports = {
     ]
   },
   output: {
+    publicPath: ASSET_PATH,
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
@@ -69,6 +76,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
-    ExtractPlugin
+    ExtractPlugin,
+    DefinePlugin
   ]
 }

@@ -11,7 +11,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Landing} />
       {/*<Route path='/me' component={Me} />*/}
-      <Route path='*' component={() => (<NotFound />)} />
+      <Route path='*' component={NotFound} />
     </Switch>
   </Router>
 )

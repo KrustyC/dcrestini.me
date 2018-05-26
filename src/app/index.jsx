@@ -1,12 +1,15 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
-import AppRoutes from './routes'
+import { AppRoutes, history } from 'app/router'
+import Layout from './layout'
 
 const App = () => (
-  <BrowserRouter>
-    <AppRoutes />
-  </BrowserRouter>
+  <Router history={history}>
+    <Layout>
+      <AppRoutes />
+    </Layout>
+  </Router>
 )
 
 export default hot(module)(App)

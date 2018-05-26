@@ -11,15 +11,11 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.html$/,
-        use: {
-          loader: 'html-loader'
-        }
+        loader: 'html-loader'
       },
       {
         test: /\.(css|scss|sass|less)$/,
@@ -33,6 +29,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      app: path.join(__dirname, '../src/app/'),
       layouts: path.join(__dirname, '../src/views/layouts/'),
       pages: path.join(__dirname, '../src/app/pages/'),
       uikit: path.join(__dirname, '../src/uikit/')

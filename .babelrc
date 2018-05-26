@@ -3,6 +3,8 @@
     "plugins": [
       "transform-async-to-generator",
       "transform-class-properties",
-      "babel-plugin-styled-components"
+      "babel-plugin-styled-components",
+      "syntax-dynamic-import"
+
   ]
 }

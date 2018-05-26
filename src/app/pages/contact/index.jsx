@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class BasicLayout extends Component {
+export default class Contact extends Component {
   render() {
     return (
       <div>
-        
+        Contact
       </div>
     )
   }

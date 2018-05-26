@@ -34,6 +34,7 @@ module.exports = {
   resolve: {
     alias: {
       layouts: path.join(__dirname, '../src/views/layouts/'),
+      pages: path.join(__dirname, '../src/app/pages/'),
       uikit: path.join(__dirname, '../src/uikit/')
     },
     extensions: ['.js', '.jsx']

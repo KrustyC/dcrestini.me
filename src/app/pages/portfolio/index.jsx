@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class BasicLayout extends Component {
+export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        
+        Portfolio
       </div>
     )
   }

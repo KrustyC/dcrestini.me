@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import AppRoutes from './routes'
 
-export default class App extends Component {
-  state = {
-    isMounted: false
-  }
+const App = () => (
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>
+)
 
-  componentDidMount() {
-    this.setState({ isMounted: true })
-  }
 
-  render() {
-    const { isMounted } = this.state
-    return (
-      <div>
-        {isMounted ? 'Mounted' : 'Not Mounted'}
-        Davide's Website
-      </div>
-    )
-  }
-}
+export default App

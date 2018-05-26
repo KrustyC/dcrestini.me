@@ -4,7 +4,8 @@
       "transform-async-to-generator",
       "transform-class-properties",
       "babel-plugin-styled-components",
-      "syntax-dynamic-import"
+      "syntax-dynamic-import",
+      "react-hot-loader/babel"
 
   ]
 }

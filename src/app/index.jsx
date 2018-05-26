@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { hot } from 'react-hot-loader'
 import AppRoutes from './routes'
 
 const App = () => (
@@ -8,5 +9,4 @@ const App = () => (
   </BrowserRouter>
 )
 
-
-export default App
+export default hot(module)(App)

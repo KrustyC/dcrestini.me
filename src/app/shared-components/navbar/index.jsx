@@ -1,12 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Navbar } from 'uikit'
 import { Keyboard } from 'styled-icons/fa-regular/Keyboard'
+import { Navbar } from 'uikit'
+import { GlobalConsumer } from 'app/GlobalContext'
 
-// @TODO Add icons
-
-
-const CustomNavbar = ({ toggleTerminal }) => (
+const CustomNavbar = () => (
   <Navbar>
     <Navbar.Brand img="https://bulma.io/images/bulma-logo.png" />
     <Navbar.MenuWrapper>
@@ -18,19 +15,19 @@ const CustomNavbar = ({ toggleTerminal }) => (
       </Navbar.Menu>
       <Navbar.Menu position="end">
         <Navbar.ButtonContainer>
-          <Navbar.Button onClick={toggleTerminal} isText>
-            <span className="icon is-small" style={{ color: 'white' }}>
-              <Keyboard />
-            </span>
-          </Navbar.Button>
+          <GlobalConsumer>
+            {({ toggleTerminal }) => (
+              <Navbar.Button onClick={toggleTerminal} isText>
+                <span className="icon is-small" style={{ color: 'white' }}>
+                  <Keyboard />
+                </span>
+              </Navbar.Button>
+            )}
+          </GlobalConsumer>
         </Navbar.ButtonContainer>
       </Navbar.Menu>
     </Navbar.MenuWrapper>
   </Navbar>
 )
-
-CustomNavbar.propTypes = {
-  toggleTerminal: PropTypes.func.isRequired
-}
 
 export default CustomNavbar

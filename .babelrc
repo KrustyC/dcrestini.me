@@ -1,6 +1,7 @@
 {
     "presets":["env", "react"],
     "plugins": [
+      "transform-object-rest-spread",
       "transform-async-to-generator",
       "transform-class-properties",
       "babel-plugin-styled-components",

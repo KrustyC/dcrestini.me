@@ -24,6 +24,7 @@
     "react-bash": "^1.6.0",
     "react-dom": "^16.4.0",
     "react-hot-loader": "^4.2.0",
+    "react-pose": "^1.6.4",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "styled-components": "^3.3.0",

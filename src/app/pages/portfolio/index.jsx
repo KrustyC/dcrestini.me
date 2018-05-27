@@ -1,9 +1,10 @@
 import React from 'react'
+import { MainLayout } from 'app/layouts'
 
 const Portfolio = () => (
-  <div>
+  <MainLayout>
     Portfolio
-  </div>
+  </MainLayout>
 )
 
 export default Portfolio

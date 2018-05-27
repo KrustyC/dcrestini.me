@@ -1,38 +1,40 @@
 import get from 'lodash/get'
-// import { history as browserHistory } from 'app/router'
+import { history as browserHistory } from 'app/router'
 
-// const navigate = {
-//   exec: ({ structure, cwd, history }, { args }) => {
-//     const location = get(args, '0')
-//     switch (location) {
-//       case 'home':
-//         browserHistory.push('/')
-//         break
-//       case 'about':
-//         browserHistory.push('/about')
-//         break
-//       case 'portfolio':
-//         browserHistory.push('/portfolio')
-//         break
-//       case 'contact':
-//         browserHistory.push('/contact')
-//         break
-//       case '.github':
-//         window.location.replace('https://github.com/krustyc')
-//         break
-//       default:
-//         return {
-//           structure,
-//           cwd,
-//           history: [
-//             ...history,
-//             { value: `the page "${location}" does not exist, try another one...` }
-//           ]
-//         }
-//     }
-//     return { structure, cwd, history }
-//   }
-// }
+// @TODO add command exit!
+
+const navigate = {
+  exec: ({ structure, cwd, history }, { args }) => {
+    const location = get(args, '0')
+    switch (location) {
+      case 'home':
+        browserHistory.push('/')
+        break
+      case 'about':
+        browserHistory.push('/about')
+        break
+      case 'portfolio':
+        browserHistory.push('/portfolio')
+        break
+      case 'contact':
+        browserHistory.push('/contact')
+        break
+      case '.github':
+        window.location.replace('https://github.com/krustyc')
+        break
+      default:
+        return {
+          structure,
+          cwd,
+          history: [
+            ...history,
+            { value: `the page "${location}" does not exist, try another one...` }
+          ]
+        }
+    }
+    return { structure, cwd, history }
+  }
+}
 
 const helpme = {
   exec: ({ structure, cwd, history }) => {
@@ -69,6 +71,6 @@ const structure = {
   '.github': { content: 'Link to my github: https://github.com/krustyc' }
 }
 
-const extensions = {  helpme }
+const extensions = { navigate, helpme }
 
 export { structure, extensions, history }

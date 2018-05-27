@@ -1,3 +1,5 @@
+import Card from './card'
+import HangingPicture from './hanging-picture'
 import Navbar from './navbar'
 
-export { Navbar }
+export { Card, HangingPicture, Navbar }

@@ -50,6 +50,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../src/index.html'),
+      chunksSortMode: (a, b) => ((a.names[0] < b.names[0]) ? 1 : -1),
       filename: 'index.html'
     }),
     new CopyWebpackPlugin([

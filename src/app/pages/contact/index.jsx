@@ -1,9 +1,10 @@
 import React from 'react'
+import { MainLayout } from 'app/layouts'
 
 const Contact = () => (
-  <div>
+  <MainLayout>
     Contact
-  </div>
+  </MainLayout>
 )
 
 export default Contact

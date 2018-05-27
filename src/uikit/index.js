@@ -1,4 +1,4 @@
 import { P } from './elements'
-import { Navabar } from './blocks'
+import { Navbar } from './blocks'
 
 export { P, Navbar }

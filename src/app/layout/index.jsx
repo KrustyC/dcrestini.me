@@ -11,7 +11,7 @@ const HomeMain = styled.div`
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url('https://wallpapercave.com/wp/4Eg4frU.jpg') no-repeat center center fixed;
+  ), url('assets/img/homepage.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

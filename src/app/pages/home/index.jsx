@@ -3,13 +3,12 @@ import React from 'react'
 const Home = () => (
   <div className="hero-body">
     <div className="container has-text-centered">
-      <div className="column is-6 is-offset-3">
-        <h1 className="title">Hi my name is Davide Crestini and I'm a software developer!</h1>
+      <div className="column is-8 is-offset-2">
+        <h1 className="title">Hi I'm Davide Crestini and I'm a software developer!</h1>
         <h2 className="subtitle">
-          $this is the best software platform for running an internet business.
-          We handle billions of dollars every year for forward-thinking businesses around the world.
+          Here I'll show some all the stuff I've been working on...
         </h2>
-        <button className="button">checkout my stuff</button>
+        <button className="button is-large is-rounded is-link">Check It Out!</button>
       </div>
     </div>
   </div>

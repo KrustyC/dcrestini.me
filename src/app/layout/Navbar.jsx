@@ -1,57 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Navbar } from 'uikit'
+import { Keyboard } from 'styled-icons/fa-regular/Keyboard'
 
-// @TODO Refactor into uikit components + add icons
+// @TODO Add icons
 
-const Navbar = ({ toggleTerminal }) => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link className="navbar-item" to="/">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            alt="Bulma: a modern CSS framework based on Flexbox"
-            width="112"
-            height="28"
-          />
-        </Link>
-        <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
 
-      <div className="navbar-menu">
-        <div className="navbar-start">
-          <Link to="/" className="navbar-item">Home</Link>
-          <Link to="/about" className="navbar-item">About</Link>
-          <Link to="/portfolio" className="navbar-item">Portfolio</Link>
-          <Link to="/contact" className="navbar-item">Contact</Link>
-        </div>
-
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="field is-grouped">
-              <p className="control">
-                <button onClick={toggleTerminal} className="button is-primary">
-                  <span className="icon">
-                    <i className="fas fa-download" />
-                  </span>
-                  <span>Terminal</span>
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+const CustomNavbar = ({ toggleTerminal }) => (
+  <Navbar>
+    <Navbar.Brand img="https://bulma.io/images/bulma-logo.png" />
+    <Navbar.MenuWrapper>
+      <Navbar.Menu position="start">
+        <Navbar.Link to="/" >Home</Navbar.Link>
+        <Navbar.Link to="/about" >About</Navbar.Link>
+        <Navbar.Link to="/portfolio" >Portfolio</Navbar.Link>
+        <Navbar.Link to="/contact" >Contact</Navbar.Link>
+      </Navbar.Menu>
+      <Navbar.Menu position="end">
+        <Navbar.ButtonContainer>
+          <Navbar.Button onClick={toggleTerminal} isText>
+            <span className="icon is-small" style={{ color: 'white' }}>
+              <Keyboard />
+            </span>
+          </Navbar.Button>
+        </Navbar.ButtonContainer>
+      </Navbar.Menu>
+    </Navbar.MenuWrapper>
+  </Navbar>
 )
 
-Navbar.propTypes = {
+CustomNavbar.propTypes = {
   toggleTerminal: PropTypes.func.isRequired
 }
 
-export default Navbar
+export default CustomNavbar

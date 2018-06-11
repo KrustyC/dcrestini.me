@@ -1,6 +1,6 @@
 import map from 'lodash/map'
 import React from 'react'
-import books from './finished.json'
+import books from './toRead.json'
 
 const Finished = () => (
   <ul>

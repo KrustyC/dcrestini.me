@@ -22,9 +22,9 @@ const FINISHED = 2
 const TO_READ = 3
 
 const types = [
-  { id: READING, label: 'Reading Now' },
-  { id: FINISHED, label: 'Finished' },
-  { id: TO_READ, label: 'To Read' }
+  { id: READING, label: 'READING NOW' },
+  { id: FINISHED, label: 'FINISHED' },
+  { id: TO_READ, label: 'TO READ' }
 ]
 
 export default class ReadingList extends Component {
@@ -44,7 +44,7 @@ export default class ReadingList extends Component {
         <div className="container">
           <h1 className="title">My reading list</h1>
           <br />
-          <div className="tabs is-toggle is-fullwidth">
+          <div className="tabs is-centered is-fullwidth">
             <ul>
               {map(types, ({ id, label }) => (
                 <li className={activeTab === id ? 'is-active' : null}>

@@ -3,9 +3,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: {
-    index: path.join(__dirname, '../src/index.js')
-  },
+  entry: [
+    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fontawesome.scss'),
+    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-solid.scss'),
+    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-brands.scss'),
+    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-regular.scss'),
+    path.join(__dirname, '../src/index.js')
+  ],
   module: {
     rules: [
       {
@@ -19,11 +23,19 @@ module.exports = {
       },
       {
         test: /\.(css|scss|sass|less)$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader']
       },
       {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: 'file-loader'
       }
     ]
   },

@@ -1,4 +1,4 @@
 import { P } from './elements'
-import { Card, HangingPicture, Navbar } from './blocks'
+import { Card, Polaroid, Navbar } from './blocks'
 
-export { Card, HangingPicture, P, Navbar }
+export { Card, Polaroid, P, Navbar }

@@ -1,9 +1,9 @@
 import React from 'react'
 import { MainLayout } from 'app/layouts'
 
-import Description from './Description'
-import Interests from './Interests'
-import ReadingList from './ReadingList'
+import Description from './description'
+import Interests from './interests'
+import ReadingList from './reading-list'
 
 const About = () => (
   <MainLayout>

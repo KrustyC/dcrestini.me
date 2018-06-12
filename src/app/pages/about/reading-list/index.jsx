@@ -41,7 +41,7 @@ export default class ReadingList extends Component {
 
     return (
       <Section>
-        <div className="container">
+        <div className="container has-text-centered">
           <h1 className="title">My reading list</h1>
           <br />
           <div className="tabs is-centered is-fullwidth">

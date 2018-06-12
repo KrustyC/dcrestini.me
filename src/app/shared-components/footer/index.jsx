@@ -1,42 +1,57 @@
 import React from 'react'
+import { Column, Footer, Icon } from 'uikit'
 
-const Footer = () => (
-  <footer className="footer">
-    <div className="container">
-      <div className="columns">
-        <div className="column is-3 is-offset-2">
-          <h2><strong>Find me on</strong></h2>
-          <ul>
-            <li>LinkedIn</li>
-            <li>GitHub</li>
-            <li>Facebook</li>
-          </ul>
-        </div>
-        <div className="column is-3">
-          <h2><strong>Contacts</strong></h2>
-          <ul>
-            <li>Phone +44 07745149793</li>
-            <li>Email davide.crestini94@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-      <div className="content has-text-centered">
-        <p>
-          <a className="icon" href="https://github.com/dansup/bulma-templates">
-            <i className="fa fa-github" />
-          </a>
-        </p>
-        <div className="control level-item">
-          <a href="https://github.com/dansup/bulma-templates">
-            <div className="tags has-addons">
-              <span className="tag is-dark">Davide Crestini</span>
-              <span className="tag is-info">MIT license</span>
-            </div>
-          </a>
-        </div>
-      </div>
+const CustomFooter = () => (
+  <Footer>
+    <div className="container columns">
+      <Column columns={4}>
+        <Footer.Heading>Find me on</Footer.Heading>
+        <Footer.List>
+          <Footer.List.Item>
+            <a
+              href="https://www.linkedin.com/in/davide-crestini-833aa011a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="fab fa-linkedin" /> LinkedIn
+            </a>
+          </Footer.List.Item>
+          <Footer.List.Item>
+            <a
+              href="https://github.com/KrustyC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="fab fa-github" /> Github
+            </a>
+          </Footer.List.Item>
+          <Footer.List.Item>
+            <a
+              href="https://www.facebook.com/davide.crestini.1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="fab fa-facebook" /> Facebook
+            </a>
+          </Footer.List.Item>
+        </Footer.List>
+      </Column>
+      <Column columns={4}>
+        <Footer.Heading>Contacts</Footer.Heading>
+        <Footer.List>
+          <Footer.List.Item>
+            <Icon icon="fas fa-phone" /> +44 07745 149793
+          </Footer.List.Item>
+          <Footer.List.Item>
+            <Icon icon="fas fa-envelope" /> davide.crestini94@gmail.com
+          </Footer.List.Item>
+        </Footer.List>
+      </Column>
     </div>
-  </footer>
+    <Footer.BottomContent>
+      <Footer.Addons left="Davide Crestini" right="MIT License" />
+    </Footer.BottomContent>
+  </Footer>
 )
 
-export default Footer
+export default CustomFooter

@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Keyboard } from 'styled-icons/fa-regular/Keyboard'
 import { Navbar } from 'uikit'
 import { GlobalConsumer } from 'app/GlobalContext'
 
-const CustomNavbar = () => (
-  <Navbar>
+const CustomNavbar = ({ transparent }) => (
+  <Navbar transparent={transparent} >
     <Navbar.Brand img="https://bulma.io/images/bulma-logo.png" />
     <Navbar.MenuWrapper>
       <Navbar.Menu position="start">
@@ -29,5 +30,13 @@ const CustomNavbar = () => (
     </Navbar.MenuWrapper>
   </Navbar>
 )
+
+CustomNavbar.propTypes = {
+  transparent: PropTypes.bool
+}
+
+CustomNavbar.defaultProps = {
+  transparent: false
+}
 
 export default CustomNavbar

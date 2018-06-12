@@ -16,7 +16,7 @@ const Layout = styled.div`
 const Home = () => (
   <Layout className="hero is-info is-fullheight">
     <div className="hero-head">
-      <Navbar />
+      <Navbar transparent />
     </div>
     <div className="hero-body">
       <div className="container has-text-centered">

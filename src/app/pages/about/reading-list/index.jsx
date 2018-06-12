@@ -47,7 +47,7 @@ export default class ReadingList extends Component {
           <div className="tabs is-centered is-fullwidth">
             <ul>
               {map(types, ({ id, label }) => (
-                <li className={activeTab === id ? 'is-active' : null}>
+                <li className={activeTab === id ? 'is-active' : null} key={id}>
                   {/* eslint-disable-next-line */}
                   <a onClick={() => this.switchTab(id)}>
                     <span>{label}</span>

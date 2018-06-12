@@ -9,8 +9,9 @@ import Link from './Link'
 import Menu from './Menu'
 import MenuWrapper from './MenuWrapper'
 
-const Navbar = ({ children }) => (
-  <nav className="navbar is-transparent">
+
+const Navbar = ({ children, transparent }) => (
+  <nav className={`navbar is-${transparent ? 'transparent' : 'primary'}`}>
     <div className="container">
       {children}
     </div>
@@ -18,7 +19,12 @@ const Navbar = ({ children }) => (
 )
 
 Navbar.propTypes = {
-  children: PropTypes.any.isRequired
+  children: PropTypes.any.isRequired,
+  transparent: PropTypes.bool
+}
+
+Navbar.defaultProps = {
+  transparent: false
 }
 
 Navbar.Brand = Brand

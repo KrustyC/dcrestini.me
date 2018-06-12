@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Addons from './Addons'
 import BottomContent from './BottomContent'
 import Heading from './Heading'
 import List from './List'
 
+const FooterContainer = styled.footer`
+  padding: 2rem 1.5rem 4rem;
+`
+
 const Footer = ({ children }) => (
-  <footer className="footer">
+  <FooterContainer className="footer">
     <div className="container">
       {children}
     </div>
-  </footer>
+  </FooterContainer>
 )
 
 Footer.propTypes = {

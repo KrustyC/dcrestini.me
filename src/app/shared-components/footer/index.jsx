@@ -40,9 +40,6 @@ const CustomFooter = () => (
         <Footer.Heading>Contacts</Footer.Heading>
         <Footer.List>
           <Footer.List.Item>
-            <Icon icon="fas fa-phone" /> +44 07745 149793
-          </Footer.List.Item>
-          <Footer.List.Item>
             <Icon icon="fas fa-envelope" /> davide.crestini94@gmail.com
           </Footer.List.Item>
         </Footer.List>

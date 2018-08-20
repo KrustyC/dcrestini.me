@@ -6,10 +6,9 @@ import { GlobalConsumer } from 'app/GlobalContext'
 
 const CustomNavbar = ({ transparent }) => (
   <Navbar transparent={transparent} >
-    <Navbar.Brand img="https://bulma.io/images/bulma-logo.png" />
+    <Navbar.Brand>Davide Crestini</Navbar.Brand>
     <Navbar.MenuWrapper>
       <Navbar.Menu position="start">
-        <Navbar.Link to="/" >Home</Navbar.Link>
         <Navbar.Link to="/about" >About</Navbar.Link>
         <Navbar.Link to="/portfolio" >Portfolio</Navbar.Link>
         <Navbar.Link to="/contact" >Contact</Navbar.Link>

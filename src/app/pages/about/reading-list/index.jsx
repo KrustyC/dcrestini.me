@@ -11,10 +11,27 @@ import ToRead from './ToRead'
 const Section = styled.div`
   display: flex;
   width: 100%;
-  min-height: 400px;
+  height: 800px;
+  overflow: auto;
   padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: ${prop('theme.colors.light', '#FFF')};
+  padding-bottom: 840px;
+  background-color: ${prop('theme.colors.dark')};
+  color: ${prop('theme.colors.light')};
+
+  h1 {
+    color: ${prop('theme.colors.light')};
+  }
+`
+
+const Tabs = styled.div`
+  a {
+    color: ${prop('theme.colors.light')};
+    border-bottom-color: ${prop('theme.colors.light')};
+
+    &.is-active {
+      border-bottom-color: ${prop('theme.colors.accent')};
+    }
+  }
 `
 
 const READING = 1
@@ -41,10 +58,10 @@ export default class ReadingList extends Component {
 
     return (
       <Section>
-        <div className="container has-text-centered">
-          <h1 className="title">My reading list</h1>
+        <div className="container">
+          <h1 className="title">Reading List</h1>
           <br />
-          <div className="tabs is-centered is-fullwidth">
+          <Tabs className="tabs is-centered is-fullwidth">
             <ul>
               {map(types, ({ id, label }) => (
                 <li className={activeTab === id ? 'is-active' : null} key={id}>
@@ -55,7 +72,7 @@ export default class ReadingList extends Component {
                 </li>
               ))}
             </ul>
-          </div>
+          </Tabs>
           <div>
             {activeTab === READING && <Reading />}
             {activeTab === FINISHED && <Finished />}

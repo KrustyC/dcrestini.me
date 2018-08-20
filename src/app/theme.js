@@ -1,11 +1,13 @@
-const PRIMARY = '#00b894'
-const ACCENT = '#e84393'
-const INFO = '#0984e3'
-const LINK = '#74b9ff'
-const DANGER = '#d63031'
-const WARNING = '#fdcb6e'
-const DARK = '#2d3436'
-const GREY = '#dfe6e9'
+import { lighten } from 'polished'
+
+const PRIMARY = '#F26565'
+const ACCENT = '#3445BF'
+const INFO = '#2196F3'
+const LINK = '#03A9F4'
+const DANGER = '#F44336'
+const WARNING = '#FFC107'
+const DARK = '#1f2e41'
+const GREY = '#BDBDBD'
 
 export default {
   colors: {
@@ -16,6 +18,7 @@ export default {
     danger: DANGER,
     warning: WARNING,
     dark: DARK,
-    grey: GREY
+    grey: GREY,
+    light: lighten(0.5, GREY)
   }
 }

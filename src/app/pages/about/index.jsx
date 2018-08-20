@@ -9,7 +9,7 @@ const About = () => (
   <MainLayout>
     <Description />
     <Interests />
-    <ReadingList />
+    {/*<ReadingList /> */}
   </MainLayout>
 )
 

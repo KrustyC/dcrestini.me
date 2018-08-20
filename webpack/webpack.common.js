@@ -4,10 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
-    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fontawesome.scss'),
-    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-solid.scss'),
-    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-brands.scss'),
-    path.join(__dirname, '../src/assets/libs/font-awesome/scss/fa-regular.scss'),
     path.join(__dirname, '../src/index.js')
   ],
   module: {
@@ -41,10 +37,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      app: path.join(__dirname, '../src/app/'),
-      layouts: path.join(__dirname, '../src/views/layouts/'),
-      pages: path.join(__dirname, '../src/app/pages/'),
-      uikit: path.join(__dirname, '../src/uikit/')
+      app: path.join(__dirname, '../src/app/')
     },
     extensions: ['.js', '.jsx']
   },

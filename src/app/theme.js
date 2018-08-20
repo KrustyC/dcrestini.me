@@ -1,4 +1,16 @@
+import { injectGlobal } from 'styled-components'
 import { lighten } from 'polished'
+
+// eslint-disable-next-line
+injectGlobal`
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+    color: white;
+  }
+`
+
 
 const PRIMARY = '#F26565'
 const ACCENT = '#3445BF'

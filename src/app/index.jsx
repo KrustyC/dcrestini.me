@@ -1,15 +1,14 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
-import { AppRoutes, history } from 'app/router'
-import Layout from './layout'
+import { ThemeProvider } from 'styled-components'
+
+import theme from './theme'
+import OnePage from './onepage'
 
 const App = () => (
-  <Router history={history}>
-    <Layout>
-      <AppRoutes />
-    </Layout>
-  </Router>
+  <ThemeProvider theme={theme}>
+    <OnePage />
+  </ThemeProvider>
 )
 
 export default hot(module)(App)

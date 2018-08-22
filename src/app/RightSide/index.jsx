@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import Waypoint from 'react-waypoint'
 
 import About from './About'
-// import Projects from './Projects'
+import Projects from './Projects'
+import Skills from './Skills'
 // import ReadingList from './ReadingList'
 // import Education from './Education'
-// import Skills from './Skills'
 
 const Layout = styled.div`
   flex: 1;
@@ -13,23 +14,42 @@ const Layout = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  overflow-y: scroll;
   overflow-x: none;
   background: #FFFFFF;
   color: #000000;
 `
 
-const RightSide = () => (
-  <Layout>
-    <div style={{ minWidth: '100%' }}>
-      <About />
-      ...work in progress
-      {/* <Projects shadowed />
-      <Skills />
-      <Education shadowed />
-      <ReadingList /> */}
-    </div>
-  </Layout>
-)
+const Scroll = styled.div`
+  min-width: 100%;
+  overflow: scroll;
+`
 
-export default RightSide
+export default class RightSide extends Component {
+  state = {
+    isSkillSectionVisible: false
+  }
+
+  onEnterSkillSection = () => this.setState({ isSkillSectionVisible: true })
+
+  onLeaveSkillSection = () => this.setState({ isSkillSectionVisible: false })
+
+  render() {
+    return (
+      <Layout>
+        <Scroll>
+          <About />
+          <Projects shadowed />
+          <Waypoint onEnter={this.onEnterSkillSection} onLeave={this.onLeaveSkillSection}>
+            <div>
+              <Skills isVisible={this.state.isSkillSectionVisible} />
+            </div>
+          </Waypoint>
+          {/*
+          <Education shadowed />
+          <ReadingList />
+          */}
+        </Scroll>
+      </Layout>
+    )
+  }
+}

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { prop } from 'styled-tools'
 import { emojify } from 'react-emojione'
 
-import Section from './components/Section'
+import Section from '../components/Section'
 
 const P = styled.p`
   font-size: 17px;
@@ -28,8 +28,8 @@ const About = ({ shadowed }) => (
       2016 and two months later I decided to move to London, to improve my english and challenge
       myself in a fast pace and competitive environment. I'm currently employed as as Full Stack PHP
       Developer at <a href="https://www.learningladders.info/" target="_blank" rel="noopener noreferrer">Learning Ladders</a> and I'm working
-      on <a href="https://gomuso.io/" target="_blank" rel="noopener noreferrer">>Muso</a> together with my
-      friend <b><a href="http://www.davidfloegel.com/" target="_blank" rel="noopener noreferrer">>@david</a>.</b>
+      on <a href="https://gomuso.io/" target="_blank" rel="noopener noreferrer">Muso</a> together with my
+      friend <b><a href="http://www.davidfloegel.com/" target="_blank" rel="noopener noreferrer">David</a>.</b>
       <br /><br />
       During my spare time I enojy coding, playing {emojify(':soccer:')} and {emojify(':basketball:')},
       read some books and have a {emojify(':beers:')} or

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // import styled from 'styled-components'
-import Section from './components/Section'
+import Section from '../components/Section'
 
 const ReadingList = ({ shadowed }) => (
   <Section title="Reading List" shadowed={shadowed}>

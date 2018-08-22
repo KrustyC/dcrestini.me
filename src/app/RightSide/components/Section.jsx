@@ -20,14 +20,19 @@ const Title = styled.h1`
   margin-bottom: 0px;
 `
 
+const Div = styled.div`
+  display: flex;
+  width: 100%;
+`
+
 const Section = ({ title, shadowed, children }) => (
   <SectionLayout shadowed={shadowed}>
     <Title>
       {title}
     </Title>
-    <div>
+    <Div>
       {children}
-    </div>
+    </Div>
   </SectionLayout>
 )
 

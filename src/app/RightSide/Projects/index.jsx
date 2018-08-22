@@ -14,7 +14,7 @@ const Grid = styled.div`
 `
 
 const Projects = ({ id, shadowed }) => (
-  <Section id={id} title="Projects" shadowed={shadowed}>
+  <Section id={id} title="Projects & Libraries" shadowed={shadowed}>
     <Grid>
       {map(projects, (project, i) => <Project key={i} project={project} />)}
     </Grid>

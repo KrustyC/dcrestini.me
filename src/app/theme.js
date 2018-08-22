@@ -3,7 +3,10 @@ import { lighten } from 'polished'
 
 // eslint-disable-next-line
 injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Special+Elite');
+
   html, body {
+    font-family: 'Roboto Mono', mono;
     margin: 0;
     padding: 0;
     overflow: hidden !important;
@@ -25,6 +28,7 @@ injectGlobal`
   }
 `
 
+// @TODO use this acrpss the platform
 
 const PRIMARY = '#F26565'
 const ACCENT = '#3445BF'

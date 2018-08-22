@@ -9,6 +9,20 @@ injectGlobal`
     overflow: hidden !important;
     color: white;
   }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 5px 5px 5px #D9D8DB; 
+      border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #F5675E;
+      border-radius: 0px;
+  }
 `
 
 

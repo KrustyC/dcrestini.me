@@ -15,8 +15,8 @@ const P = styled.p`
   }
 `
 
-const About = ({ shadowed }) => (
-  <Section title="A little about me" shadowed={shadowed}>
+const About = ({ id, shadowed }) => (
+  <Section id={id} title="A little about me" shadowed={shadowed}>
     <P>
       I was born and grew up in
       {' '}
@@ -45,6 +45,7 @@ const About = ({ shadowed }) => (
 )
 
 About.propTypes = {
+  id: PropTypes.string.isRequired,
   shadowed: PropTypes.bool
 }
 

@@ -25,8 +25,8 @@ const Div = styled.div`
   width: 100%;
 `
 
-const Section = ({ title, shadowed, children }) => (
-  <SectionLayout shadowed={shadowed}>
+const Section = ({ id, title, shadowed, children }) => (
+  <SectionLayout id={id} shadowed={shadowed} >
     <Title>
       {title}
     </Title>
@@ -38,6 +38,7 @@ const Section = ({ title, shadowed, children }) => (
 
 Section.propTypes = {
   shadowed: PropTypes.bool,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired
 }

@@ -5,6 +5,7 @@ import Waypoint from 'react-waypoint'
 import About from './About'
 import Projects from './Projects'
 import Skills from './Skills'
+
 // import ReadingList from './ReadingList'
 // import Education from './Education'
 
@@ -21,7 +22,7 @@ const Layout = styled.div`
 
 const Scroll = styled.div`
   min-width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
 `
 
 export default class RightSide extends Component {
@@ -36,17 +37,17 @@ export default class RightSide extends Component {
   render() {
     return (
       <Layout>
-        <Scroll>
-          <About />
-          <Projects shadowed />
+        <Scroll id="scrollable">
+          <About id="about" />
+          <Projects id="projects" shadowed />
           <Waypoint onEnter={this.onEnterSkillSection} onLeave={this.onLeaveSkillSection}>
             <div>
-              <Skills isVisible={this.state.isSkillSectionVisible} />
+              <Skills id="skills" isVisible={this.state.isSkillSectionVisible} />
             </div>
           </Waypoint>
           {/*
-          <Education shadowed />
-          <ReadingList />
+          <Education id="education" shadowed />
+          <ReadingList id="reading-list" />
           */}
         </Scroll>
       </Layout>

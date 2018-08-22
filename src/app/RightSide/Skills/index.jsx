@@ -13,11 +13,12 @@ const Div = styled.div`
   width: 100%;
 `
 
-const Skills = ({ isVisible, shadowed }) => (
-  <Section title="Skills" shadowed={shadowed}>
+const Skills = ({ id, isVisible, shadowed }) => (
+  <Section id={id} title="Skills" shadowed={shadowed}>
     <Div>
-      {map(skills, ({ skill, level, color }) => (
+      {map(skills, ({ skill, level, color }, i) => (
         <Skill
+          key={i}
           skill={skill}
           level={isVisible ? parseInt(level, 10) : 0}
           color={color}
@@ -29,6 +30,7 @@ const Skills = ({ isVisible, shadowed }) => (
 
 Skills.propTypes = {
   shadowed: PropTypes.bool,
+  id: PropTypes.string.isRequired,
   isVisible: PropTypes.bool.isRequired
 }
 

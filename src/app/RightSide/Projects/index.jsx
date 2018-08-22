@@ -13,8 +13,8 @@ const Grid = styled.div`
   grid-column-gap: 30px;
 `
 
-const Projects = ({ shadowed }) => (
-  <Section title="Projects and stuff" shadowed={shadowed}>
+const Projects = ({ id, shadowed }) => (
+  <Section id={id} title="Projects" shadowed={shadowed}>
     <Grid>
       {map(projects, (project, i) => <Project key={i} project={project} />)}
     </Grid>
@@ -22,7 +22,8 @@ const Projects = ({ shadowed }) => (
 )
 
 Projects.propTypes = {
-  shadowed: PropTypes.bool
+  shadowed: PropTypes.bool,
+  id: PropTypes.string.isRequired
 }
 
 Projects.defaultProps = {

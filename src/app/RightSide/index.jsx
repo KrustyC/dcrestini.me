@@ -11,7 +11,7 @@ import Skills from './Skills'
 import Footer from './Footer'
 
 const Layout = styled.div`
-  flex: 1;
+  flex: 4;
   flex-direction: column;
   display: flex;
   align-items: flex-start;

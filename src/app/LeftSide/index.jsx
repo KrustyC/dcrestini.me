@@ -6,7 +6,7 @@ import linkedinIcon from './icons/linkedin.svg'
 import AnchorLink from '../components/AnchorLink'
 
 const Layout = styled.div`
-  flex: 1;
+  flex: 3;
   flex-direction: column;
   display: flex;
   align-items: center;

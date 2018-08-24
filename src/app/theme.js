@@ -1,5 +1,14 @@
 import { injectGlobal } from 'styled-components'
-import { lighten } from 'polished'
+import { lighten, darken } from 'polished'
+
+const PRIMARY = '#F26565'
+const ACCENT = '#3445BF'
+const INFO = '#2196F3'
+const LINK = '#03A9F4'
+const DANGER = '#F44336'
+const WARNING = '#FFC107'
+const DARK = '#1f2e41'
+const GREY = '#BDBDBD'
 
 // eslint-disable-next-line
 injectGlobal`
@@ -23,21 +32,10 @@ injectGlobal`
   }
 
   ::-webkit-scrollbar-thumb {
-      background: #F5675E;
+      background: ${PRIMARY};
       border-radius: 0px;
   }
 `
-
-// @TODO use this acrpss the platform
-
-const PRIMARY = '#F26565'
-const ACCENT = '#3445BF'
-const INFO = '#2196F3'
-const LINK = '#03A9F4'
-const DANGER = '#F44336'
-const WARNING = '#FFC107'
-const DARK = '#1f2e41'
-const GREY = '#BDBDBD'
 
 export default {
   colors: {
@@ -50,5 +48,11 @@ export default {
     dark: DARK,
     grey: GREY,
     light: lighten(0.5, GREY)
+  },
+  utils: {
+    softDarken: color => darken(0.2, color),
+    hardDarken: color => darken(0.5, color),
+    softLighten: color => lighten(0.2, color),
+    hardLighten: color => lighten(0.5, color)
   }
 }

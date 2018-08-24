@@ -13,17 +13,16 @@ const Div = styled.div`
   }
 `
 
-const Skill = ({ skill, level, color }) => (
+const Skill = ({ skill, level }) => (
   <Div>
     <h4>{skill}</h4>
-    <SkillBar level={level} color={color} />
+    <SkillBar level={level} />
   </Div>
 )
 
 Skill.propTypes = {
   skill: PropTypes.string.isRequired,
-  level: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired
+  level: PropTypes.number.isRequired
 }
 
 export default Skill

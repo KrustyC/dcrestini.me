@@ -15,26 +15,26 @@ const Level = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 5px;
+  font-size: 12px;
 
-  ${({ level, color }) => css`
-    background: ${color};
+  ${({ level }) => css`
+    background: #03A9F4;
     width: ${level}%;
     transition: width 2s ease-in-out;
     color: white;
   `}
 `
 
-const SkillBar = ({ level, color }) => (
+const SkillBar = ({ level }) => (
   <Container>
-    <Level level={level} color={color}>
+    <Level level={level} >
       {level > 10 && `${level}%`}
     </Level>
   </Container>
 )
 
 SkillBar.propTypes = {
-  level: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired
+  level: PropTypes.number.isRequired
 }
 
 export default SkillBar

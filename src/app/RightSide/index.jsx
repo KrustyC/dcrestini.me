@@ -8,6 +8,7 @@ import Skills from './Skills'
 
 // import ReadingList from './ReadingList'
 // import Education from './Education'
+import Footer from './Footer'
 
 const Layout = styled.div`
   flex: 1;
@@ -49,6 +50,7 @@ export default class RightSide extends Component {
           <Education id="education" shadowed />
           <ReadingList id="reading-list" />
           */}
+          <Footer id="footer" shadowed />
         </Scroll>
       </Layout>
     )

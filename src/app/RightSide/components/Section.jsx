@@ -25,7 +25,9 @@ const Div = styled.div`
   width: 100%;
 `
 
-const Section = ({ id, title, noTitle, shadowed, children }) => (
+const Section = ({
+  id, title, noTitle, shadowed, children
+}) => (
   <SectionLayout id={id} shadowed={shadowed} >
     {noTitle || (
       <Title>

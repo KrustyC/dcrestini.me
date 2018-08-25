@@ -23,7 +23,7 @@ const projects = [
     and reharshal studios. I work on this on my spare time as a side project. I work both on
     frontend (React) and backend (NodeJs) as well as taking DevOps (Chef Recipes). `,
     dates: '09/2017 - current',
-    link: 'https://gomuso.io/',
+    link: 'https://gomuso.io/'
   },
   {
     title: 'GraphQL & NodeJs Boilerplate',

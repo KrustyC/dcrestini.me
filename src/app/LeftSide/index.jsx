@@ -3,9 +3,10 @@ import styled from 'styled-components'
 
 import githubIcon from './icons/github.svg'
 import linkedinIcon from './icons/linkedin.svg'
+import AnchorLink from '../components/AnchorLink'
 
 const Layout = styled.div`
-  flex: 1;
+  flex: 3;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -39,10 +40,16 @@ const Buttons = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
 
-  span {
+  a {
     margin-right: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+
+    &:hover {
+      color: #E3E2E5;
+    }
   }
 `
 
@@ -79,7 +86,9 @@ const LeftSide = () => (
       </div>
     </Description>
     <Buttons>
-      <span>About</span>
+      <AnchorLink href="#about">About</AnchorLink>
+      <AnchorLink href="#projects">Projects</AnchorLink>
+      <AnchorLink href="#skills">Skills</AnchorLink>
       {/* <span>Portofolio</span>
       <span>Education</span>
       <span>Reading List</span>

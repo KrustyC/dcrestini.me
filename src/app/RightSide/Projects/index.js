@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import map from 'lodash/map';
 import Section from '../components/Section';
 import Project from './Project';
 import projects from './projects';
@@ -16,8 +15,8 @@ const Grid = styled.div`
 const Projects = ({ id, shadowed }) => (
   <Section id={id} title="Projects & Libraries" shadowed={shadowed}>
     <Grid>
-      {map(projects, (project, i) => (
-        <Project key={i} project={project} />
+      {projects.map(project => (
+        <Project key={project.title} project={project} />
       ))}
     </Grid>
   </Section>

@@ -14,7 +14,7 @@ const Grid = styled.div`
 `;
 
 const Projects = ({ id, shadowed }) => (
-  <Section id={id} title="Projects & Libraries" shadowed={shadowed}>
+  <Section id={id} title="Projects" shadowed={shadowed}>
     <Query query={GET_PROJECTS}>
       {({ loading, error, data }) => {
         if (loading) return 'Loading...';

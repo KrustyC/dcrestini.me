@@ -2,22 +2,22 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import styled, { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from 'react-apollo';
+import media from 'styled-media-query';
 import client from './ApolloClient';
-
 import LeftSide from './LeftSide';
 import RightSide from './RightSide';
 import GlobalStyle from './GlobalStyle';
 import theme from './theme';
 
-const EmptyLayout = styled.div`
-  display: flex;
-  height: 100vh;
-`;
-
-const Container = styled.div`
+const MainLayout = styled.div`
+  min-height: 100vh;
   display: flex;
   flex: 1;
   flex-grow: 1;
+
+  ${media.lessThan('medium')`
+   flex-direction: column;
+  `}
 `;
 
 const App = () => (
@@ -25,12 +25,10 @@ const App = () => (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <EmptyLayout>
-          <Container>
-            <LeftSide />
-            <RightSide />
-          </Container>
-        </EmptyLayout>
+        <MainLayout>
+          <LeftSide />
+          <RightSide />
+        </MainLayout>
       </>
     </ThemeProvider>
   </ApolloProvider>

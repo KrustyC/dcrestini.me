@@ -9,10 +9,9 @@ const SectionLayout = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 40px 20px 40px;
   background: ${ifProp({ shadowed: true }, '#F9F6F5', '#FFFFFF')};
   color: #000000;
-  overflow: hidden;
+  padding: 0px 40px 20px 40px;
 `;
 
 const Title = styled.h1`

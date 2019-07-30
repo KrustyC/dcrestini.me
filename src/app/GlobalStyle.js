@@ -7,16 +7,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Mono', mono;
     margin: 0;
     padding: 0;
-    overflow: hidden !important;
     color: white;
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 3px;
   }
 
   ::-webkit-scrollbar-track {
-      box-shadow: inset 5px 5px 5px #D9D8DB; 
+      box-shadow: inset 5px 5px 5px #D9D8DB;
       border-radius: 10px;
   }
 

@@ -16,15 +16,11 @@ const Layout = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  overflow-x: none;
   background: #ffffff;
   color: #000000;
+  max-width: 100%;
 `;
 
-const Scroll = styled.div`
-  min-width: 100%;
-  overflow-y: scroll;
-`;
 const RightSide = () => {
   const [isSkillSectionVisible, setIsSkillSectionVisible] = useState(false);
 
@@ -34,20 +30,20 @@ const RightSide = () => {
 
   return (
     <Layout>
-      <Scroll id="scrollable">
-        <About id="about" />
-        <Projects id="projects" shadowed />
-        <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
-          <div>
-            <Skills id="skills" isVisible={isSkillSectionVisible} />
-          </div>
-        </Waypoint>
-        {/*
+      <About id="about" />
+      <Projects id="projects" shadowed />
+      <Projects id="projects" />
+      <Projects id="projects" shadowed />
+      <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
+        <div>
+          <Skills id="skills" isVisible={isSkillSectionVisible} />
+        </div>
+      </Waypoint>
+      {/*
           <Education id="education" shadowed />
           <ReadingList id="reading-list" />
           */}
-        <Footer id="footer" shadowed />
-      </Scroll>
+      <Footer id="footer" shadowed />
     </Layout>
   );
 };

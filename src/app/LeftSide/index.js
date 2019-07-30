@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import AnchorLink from 'components/AnchorLink';
 import githubIcon from './icons/github.svg';
 import linkedinIcon from './icons/linkedin.svg';
@@ -11,7 +12,21 @@ const Layout = styled.div`
   align-items: center;
   justify-content: center;
   background: #f5675e;
+  background: red;
   font-family: 'Special Elite';
+  max-width: 100%;
+  height: 100vh;
+
+  ${media.greaterThan('medium')`
+    position: sticky;
+    top: 0px;
+  `}
+
+  ${media.lessThan('medium')`
+    height: 100vh;
+    padding: 0 10px;
+    width: 100vw;
+  `}
 `;
 
 const Description = styled.div`
@@ -84,10 +99,8 @@ const LeftSide = () => (
       <AnchorLink href="#about">About</AnchorLink>
       <AnchorLink href="#projects">Projects</AnchorLink>
       <AnchorLink href="#skills">Skills</AnchorLink>
-      {/* <span>Portofolio</span>
-      <span>Education</span>
-      <span>Reading List</span>
-      <span>Contact</span> */}
+      {/* <span>Education</span>
+      <span>Reading List</span> */}
     </Buttons>
   </Layout>
 );

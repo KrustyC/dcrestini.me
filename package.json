@@ -33,7 +33,6 @@
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "history": "^4.7.2",
-    "node-sass": "^4.5.3",
     "path": "^0.12.7",
     "polished": "^1.9.2",
     "prop-types": "^15.6.1",

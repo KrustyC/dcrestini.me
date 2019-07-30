@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
 
-      - run: yarn install
+      - run: yarn install --production=false
       - run: yarn test:lint
 
       # Download and cache dependencies

@@ -25,7 +25,7 @@ const areas = [
   },
   {
     title: 'Others',
-    values: ['Aws', 'GitHub', 'Webpack'],
+    values: ['Aws', 'GitHub', 'Webpack', 'REST', 'GraphQL'],
   },
 ];
 

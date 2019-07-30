@@ -12,7 +12,6 @@ const Layout = styled.div`
   align-items: center;
   justify-content: center;
   background: #f5675e;
-  background: red;
   font-family: 'Special Elite';
   max-width: 100%;
   height: 100vh;
@@ -25,7 +24,6 @@ const Layout = styled.div`
   ${media.lessThan('medium')`
     height: 100vh;
     padding: 0 10px;
-    width: 100vw;
   `}
 `;
 
@@ -65,6 +63,10 @@ const Buttons = styled.div`
       color: #e3e2e5;
     }
   }
+
+  ${media.lessThan('medium')`
+    display: none;
+  `}
 `;
 
 const Title = styled.h1`

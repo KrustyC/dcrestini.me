@@ -9,7 +9,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   h4 {
-    margin-bottom: 10px;
+    margin: 25px 0 5px;
   }
 `;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { Query } from 'react-apollo';
 import Section from 'components/Section';
 import Project from './Project';
@@ -11,6 +12,10 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 30px;
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 100%;
+  `}
 `;
 
 const Projects = ({ id, shadowed }) => (

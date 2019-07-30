@@ -34,23 +34,24 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   h4 {
-    margin-bottom: 10px;
+    margin: 25px 0 5px;
   }
 `;
 
 const Badges = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const Areas = () => (
   <Fragment>
     {areas.map(({ title, values }) => (
-      <Div>
+      <Div key={title}>
         <h4>{title}</h4>
         <Badges>
           {values.map(text => (
-            <Badge text={text} />
+            <Badge key={text} text={text} />
           ))}
         </Badges>
       </Div>

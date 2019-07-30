@@ -5,6 +5,9 @@ import Section from 'components/Section';
 import ExternalLink from 'components/ExternalLink';
 
 const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   margin-top: 20px;
 
@@ -25,7 +28,9 @@ const Footer = ({ id, shadowed }) => (
       </p>
       <p>
         View source on{' '}
-        <ExternalLink href="https://reactjs.org/">GitHub</ExternalLink>
+        <ExternalLink href="https://github.com/KrustyC/dcrestini.me">
+          GitHub
+        </ExternalLink>
       </p>
     </Div>
   </Section>

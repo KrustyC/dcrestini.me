@@ -1,14 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-// Badge img {
-//   float: left;
-//   margin: 0 10px 0 -25px;
-//   height: 50px;
-//   width: 50px;
-//   border-radius: 50%;
-// }
+import media from 'styled-media-query';
 
 const Div = styled.div`
   display: flex;
@@ -20,6 +13,10 @@ const Div = styled.div`
   border-radius: 25px;
   background-color: #f1f1f1;
   margin-right: 5px;
+
+  ${media.lessThan('medium')`
+    margin-bottom: 10px;
+  `}
 `;
 
 const Badge = ({ text }) => <Div>{text}</Div>;

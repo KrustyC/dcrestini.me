@@ -10,13 +10,11 @@ import GlobalStyle from './GlobalStyle';
 import theme from './theme';
 
 const MainLayout = styled.div`
-  min-height: 100vh;
   display: flex;
-  flex: 1;
-  flex-grow: 1;
+  min-height: 100vh;
 
   ${media.lessThan('medium')`
-   flex-direction: column;
+    flex-direction: column;
   `}
 `;
 

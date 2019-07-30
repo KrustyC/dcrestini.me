@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import Section from 'components/Section';
 import Areas from './Areas';
 import Skill from './Skill';
@@ -20,6 +21,11 @@ const TwoSide = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  `}
 `;
 
 const Side = styled.div`

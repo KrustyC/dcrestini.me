@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { ifProp } from 'styled-tools';
 
 const SectionLayout = styled.div`
-  display: flex;
   flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   background: ${ifProp({ shadowed: true }, '#F9F6F5', '#FFFFFF')};
   color: #000000;
-  padding: 0px 40px 20px 40px;
+  padding: 20px 40px;
+  width: 100%;
+
+  ${media.lessThan('medium')`
+    padding: 20px 20px;
+  `}
 `;
 
 const Title = styled.h1`

@@ -8,7 +8,7 @@ import Section from 'components/Section';
 import ExternalLink from 'components/ExternalLink';
 
 const P = styled.p`
-  font-size: 17px;
+  font-size: 16px;
 
   a {
     color: ${prop('theme.colors.link')};

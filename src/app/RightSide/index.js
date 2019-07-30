@@ -18,7 +18,7 @@ const Layout = styled.div`
   justify-content: flex-start;
   background: #ffffff;
   color: #000000;
-  max-width: 100%;
+  width: 100%;
 `;
 
 const RightSide = () => {
@@ -31,8 +31,6 @@ const RightSide = () => {
   return (
     <Layout>
       <About id="about" />
-      <Projects id="projects" shadowed />
-      <Projects id="projects" />
       <Projects id="projects" shadowed />
       <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
         <div>

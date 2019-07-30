@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Query } from 'react-apollo';
 import Section from '../components/Section';
 import Project from './Project';
-import projects from './projects';
+import GET_PROJECTS from './query';
 
 const Grid = styled.div`
   width: 100%;
@@ -14,11 +15,20 @@ const Grid = styled.div`
 
 const Projects = ({ id, shadowed }) => (
   <Section id={id} title="Projects & Libraries" shadowed={shadowed}>
-    <Grid>
-      {projects.map(project => (
-        <Project key={project.title} project={project} />
-      ))}
-    </Grid>
+    <Query query={GET_PROJECTS}>
+      {({ loading, error, data }) => {
+        if (loading) return 'Loading...';
+        if (error) return `Error! ${error.message}`;
+
+        return (
+          <Grid>
+            {data.allProjects.edges.map(({ node }) => (
+              <Project key={Math.random()} project={node} />
+            ))}
+          </Grid>
+        );
+      }}
+    </Query>
   </Section>
 );
 

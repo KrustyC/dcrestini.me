@@ -37,30 +37,46 @@ const Text = styled.p`
 const Project = ({ project }) => (
   <Container>
     <Title>
-      <h3>{project.title}</h3>
+      <h3>{project.title[0].text}</h3>
       <div>
-        {project.link && (
-          <a href={project.link}>
+        {project.url && (
+          <a href={project.url.url} target="_blank" rel="noopener noreferrer">
             <Icon src={LinkIcon} />
           </a>
         )}
-        {project.code && (
-          <a href={project.code}>
+        {project.github_link && (
+          <a
+            href={project.github_link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icon src={GithubIcon} />
           </a>
         )}
       </div>
     </Title>
-    <Text>{project.description}</Text>
+    <Text>{project.content[0].text}</Text>
   </Container>
 );
 
 Project.propTypes = {
   project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    code: PropTypes.string,
+    title: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+    content: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+    url: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }),
+    github_link: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }),
   }).isRequired,
 };
 

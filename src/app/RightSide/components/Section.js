@@ -25,24 +25,23 @@ const Div = styled.div`
   width: 100%;
 `;
 
-const Section = ({ id, title, noTitle, shadowed, children }) => (
+const Section = ({ id, title, shadowed, children }) => (
   <SectionLayout id={id} shadowed={shadowed}>
-    {noTitle || <Title>{title}</Title>}
+    {title && <Title>{title}</Title>}
     <Div>{children}</Div>
   </SectionLayout>
 );
 
 Section.propTypes = {
   shadowed: PropTypes.bool,
-  noTitle: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.any.isRequired,
 };
 
 Section.defaultProps = {
+  title: null,
   shadowed: false,
-  noTitle: false,
 };
 
 export default Section;

@@ -14,7 +14,7 @@ const Div = styled.div`
 `;
 
 const Footer = ({ id, shadowed }) => (
-  <Section id={id} noTitle shadowed={shadowed}>
+  <Section id={id} shadowed={shadowed}>
     <Div>
       <p>
         Developed with{' '}

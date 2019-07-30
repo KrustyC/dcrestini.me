@@ -1,6 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import styled, { ThemeProvider } from 'styled-components';
+import { ApolloProvider } from 'react-apollo';
+import client from './ApolloClient';
 
 import LeftSide from './LeftSide';
 import RightSide from './RightSide';
@@ -18,31 +20,20 @@ const Container = styled.div`
   flex-grow: 1;
 `;
 
-// const App = () => (
-//   <ThemeProvider theme={theme}>
-//     ciso
-//     {/* <GlobalStyle />
-//     <EmptyLayout>
-//       <Container>
-//         <LeftSide />
-//         <RightSide />
-//       </Container>
-//     </EmptyLayout> */}
-//   </ThemeProvider>
-// )
-
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyle />
-      <EmptyLayout>
-        <Container>
-          <LeftSide />
-          <RightSide />
-        </Container>
-      </EmptyLayout>
-    </>
-  </ThemeProvider>
+  <ApolloProvider client={client}>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <EmptyLayout>
+          <Container>
+            <LeftSide />
+            <RightSide />
+          </Container>
+        </EmptyLayout>
+      </>
+    </ThemeProvider>
+  </ApolloProvider>
 );
 
 export default hot(App);

@@ -40,7 +40,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install python-dev python-pip --fix-missing
             sudo pip install awscli
-            yarn install
+            yarn install --production=false
             yarn build
             aws s3 sync ~/project/dist s3://www.dcrestini.me --delete
 

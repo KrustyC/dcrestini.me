@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Waypoint from 'react-waypoint'
 
@@ -25,25 +25,21 @@ const Scroll = styled.div`
   min-width: 100%;
   overflow-y: scroll;
 `
+const RightSide = () => {
+  const [isSkillSectionVisible, setIsSkillSectionVisible] = useState(false)
 
-export default class RightSide extends Component {
-  state = {
-    isSkillSectionVisible: false
-  }
+  const onEnterSkillSection = () => setIsSkillSectionVisible(true)
+  
+  const onLeaveSkillSection = () => setIsSkillSectionVisible(false)
 
-  onEnterSkillSection = () => this.setState({ isSkillSectionVisible: true })
-
-  onLeaveSkillSection = () => this.setState({ isSkillSectionVisible: false })
-
-  render() {
-    return (
-      <Layout>
+  return (
+<Layout>
         <Scroll id="scrollable">
           <About id="about" />
           <Projects id="projects" shadowed />
-          <Waypoint onEnter={this.onEnterSkillSection} onLeave={this.onLeaveSkillSection}>
+          <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
             <div>
-              <Skills id="skills" isVisible={this.state.isSkillSectionVisible} />
+              <Skills id="skills" isVisible={isSkillSectionVisible} />
             </div>
           </Waypoint>
           {/*
@@ -53,6 +49,5 @@ export default class RightSide extends Component {
           <Footer id="footer" shadowed />
         </Scroll>
       </Layout>
-    )
-  }
+  )
 }

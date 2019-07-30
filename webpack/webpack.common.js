@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+const webpack = require("webpack");
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -57,6 +60,13 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: path.join(__dirname, '../src/assets'), to: 'assets' }
-    ])
+    ]),
+    new webpack.DefinePlugin({
+      "process.env": {
+        BASE_URL: JSON.stringify("/"),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        PRISMIC_SECRET: JSON.stringify(process.env.PRISMIC_SECRET),
+      }
+    })
   ]
 }

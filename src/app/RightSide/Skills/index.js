@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import map from 'lodash/map'
 
 import Section from '../components/Section'
 import Areas from './Areas'
 import Skill from './Skill'
-import skills from './skills'
+
+const skills = [
+  { skill: 'Frontend', level: '90' },
+  { skill: 'Backend', level: '80' },
+  { skill: 'Databases', level: '65' },
+  { skill: 'Testing', level: '75' },
+  { skill: 'DevOps', level: '50' },
+  { skill: 'Teamwork', level: '95' }
+]
 
 const TwoSide = styled.div`
   width: 100%;
@@ -25,7 +32,7 @@ const Skills = ({ id, isVisible, shadowed }) => (
   <Section id={id} title="Skills" shadowed={shadowed}>
     <TwoSide>
       <Side>
-        {map(skills, ({ skill, level, color }, i) => (
+        {skills.map(({ skill, level, color }, i) => (
           <Skill
             key={i}
             skill={skill}

@@ -1,39 +1,36 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-class AnchorLink extends Component {
-  static propTypes = {
-    children: PropTypes.string.isRequired
-  }
+const AnchorLink = ({ children, ...rest }) => {
+  useEffect(() => {
+    require('smoothscroll-polyfill').polyfill();
+  }, []);
 
-  componentDidMount() {
-    require('smoothscroll-polyfill').polyfill()
-  }
+  const onSmoothScroll = e => {
+    e.preventDefault();
 
-  smoothScroll = (e) => {
-    e.preventDefault()
-
-    const id = e.currentTarget.getAttribute('href').slice(1)
+    const id = e.currentTarget.getAttribute('href').slice(1);
     document.getElementById('scrollable').scroll({
       top: document.getElementById(id).offsetTop - 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
 
-  render() {
-    const { children, ...rest } = this.props
-    return (
-      <a
-        {...rest}
-        onClick={this.smoothScroll}
-        role="button"
-        tabIndex="0"
-        onKeyDown={() => null}
-      >
-        {children}
-      </a>
-    )
-  }
-}
+  return (
+    <a
+      {...rest}
+      onClick={onSmoothScroll}
+      role="button"
+      tabIndex="0"
+      onKeyDown={() => null}
+    >
+      {children}
+    </a>
+  );
+};
 
-export default AnchorLink
+AnchorLink.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
+export default AnchorLink;

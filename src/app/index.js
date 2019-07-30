@@ -34,9 +34,15 @@ const Container = styled.div`
 
 const App = () => (
   <ThemeProvider theme={theme}>
-   <div>
-     Ti Inculo
-   </div>
+   <>
+     <GlobalStyle />
+     <EmptyLayout>
+       <Container>
+         <LeftSide />
+         <RightSide />
+       </Container>
+     </EmptyLayout>
+   </>
   </ThemeProvider>
 )
 

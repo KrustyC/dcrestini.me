@@ -51,3 +51,5 @@ const RightSide = () => {
       </Layout>
   )
 }
+
+export default RightSide

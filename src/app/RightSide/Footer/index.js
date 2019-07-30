@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Section from '../components/Section';
-import ExternalLink from '../../components/ExternalLink';
+import Section from 'components/Section';
+import ExternalLink from 'components/ExternalLink';
 
 const Div = styled.div`
   width: 100%;

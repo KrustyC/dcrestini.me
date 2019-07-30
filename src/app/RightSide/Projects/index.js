@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Query } from 'react-apollo';
-import Section from '../components/Section';
+import Section from 'components/Section';
 import Project from './Project';
 import GET_PROJECTS from './query';
 
@@ -22,8 +22,8 @@ const Projects = ({ id, shadowed }) => (
 
         return (
           <Grid>
-            {data.allProjects.edges.map(({ node }) => (
-              <Project key={Math.random()} project={node} />
+            {data.allProjects.edges.map(({ node: project }) => (
+              <Project key={Math.random()} project={project} />
             ))}
           </Grid>
         );

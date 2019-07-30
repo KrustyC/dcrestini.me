@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-import Section from '../components/Section';
+import Section from 'components/Section';
 import Areas from './Areas';
 import Skill from './Skill';
 

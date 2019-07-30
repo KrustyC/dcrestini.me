@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import AnchorLink from 'components/AnchorLink';
 import githubIcon from './icons/github.svg';
 import linkedinIcon from './icons/linkedin.svg';
-import AnchorLink from '../components/AnchorLink';
 
 const Layout = styled.div`
   flex: 3;

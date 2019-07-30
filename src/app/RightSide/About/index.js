@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { prop } from 'styled-tools';
 import { emojify } from 'react-emojione';
 
-import Section from '../components/Section';
-import ExternalLink from '../../components/ExternalLink';
+import Section from 'components/Section';
+import ExternalLink from 'components/ExternalLink';
 
 const P = styled.p`
   font-size: 17px;

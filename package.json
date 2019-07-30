@@ -11,6 +11,18 @@
     "test:lint": "eslint src/",
     "lint:css": "stylelint './src/**/*.jsx'"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint",
+      "git add"
+    ]
+  },
   "dependencies": {
     "core-js": "^3.1.4",
     "dotenv": "^8.0.0",
@@ -57,6 +69,8 @@
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
     "resolve-url-loader": "^2.3.0",

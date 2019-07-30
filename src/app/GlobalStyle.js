@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Special+Elite');
@@ -24,6 +24,6 @@ const GlobalStyle = createGlobalStyle`
       background: ${({ theme }) => theme.colors.primary};
       border-radius: 0px;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

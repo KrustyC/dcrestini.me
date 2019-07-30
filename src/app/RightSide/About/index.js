@@ -27,12 +27,12 @@ const About = ({ id, shadowed }) => (
       . I lived there until I was 18 when I decided to move to Bologna to study{' '}
       <b>Computer Science</b>. I gruadate in December 2016 and two months later
       I decided to move to London, to improve my english and challenge myself in
-      a fast pace and competitive environment. I'm currently employed as as Full
-      Stack PHP Developer at{' '}
+      a fast pace and competitive environment. I{"'"}m currently employed as as
+      Full Stack PHP Developer at{' '}
       <ExternalLink href="https://www.learningladders.info/">
         Learning Ladders
       </ExternalLink>
-      and I'm working on{' '}
+      and I{"'"}m working on{' '}
       <ExternalLink href="https://gomuso.io/">Muso</ExternalLink> together with
       my friend{' '}
       <b>
@@ -46,7 +46,8 @@ const About = ({ id, shadowed }) => (
       <ExternalLink href="https://www.spartan.com/en">
         Spartan Race
       </ExternalLink>{' '}
-      and I'm planning to do more as soon as possible. I also love travelling!
+      and I{"'"}m planning to do more as soon as possible. I also love
+      travelling!
       <br />
       <br />
       Back in October 2017 I started volounteering as a mentor at{' '}

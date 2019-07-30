@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const AnchorLink = ({ children, ...rest }) => {
   useEffect(() => {
+    // eslint-disable-next-line
     require('smoothscroll-polyfill').polyfill();
   }, []);
 

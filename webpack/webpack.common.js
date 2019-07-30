@@ -5,16 +5,25 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const appRoot = path.dirname(__dirname);
+const src = path.join(appRoot, 'src');
+
 module.exports = {
-  entry: [
-    path.join(__dirname, '../src/index.js')
-  ],
+  context: src,
+  entry: {
+    app: './index.js',
+  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
+      },
+      {
+        test: /\.js/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: ['babel-loader'],
       },
       {
         test: /\.html$/,
@@ -36,10 +45,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      app: path.join(__dirname, '../src/app/'),
-      assets: path.join(__dirname, '../src/assets/')
+      app: src,
+      assets: path.join('assets'),
+      components: path.join('components'),
     },
-    extensions: ['.js', '.jsx']
+    extensions: ['.js'],
+    modules: [src, 'node_modules'],
   },
   optimization: {
     splitChunks: {

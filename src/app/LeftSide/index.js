@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import githubIcon from './icons/github.svg'
-import linkedinIcon from './icons/linkedin.svg'
-import AnchorLink from '../components/AnchorLink'
+import githubIcon from './icons/github.svg';
+import linkedinIcon from './icons/linkedin.svg';
+import AnchorLink from '../components/AnchorLink';
 
 const Layout = styled.div`
   flex: 3;
@@ -11,9 +11,9 @@ const Layout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F5675E;
+  background: #f5675e;
   font-family: 'Special Elite';
-`
+`;
 
 const Description = styled.div`
   display: flex;
@@ -21,17 +21,17 @@ const Description = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex: 15;
-`
+`;
 
 const Spacer = styled.hr`
   width: 70%;
   margin: 10px 0px 20px 0px;
-`
+`;
 
 const Icon = styled.img`
   width: 30px;
   margin-right: 10px;
-`
+`;
 
 const Buttons = styled.div`
   display: flex;
@@ -45,36 +45,32 @@ const Buttons = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
 
     &:hover {
-      color: #E3E2E5;
+      color: #e3e2e5;
     }
   }
-`
+`;
 
 const Title = styled.h1`
   font-weight: bold;
   font-size: 50px;
   margin-bottom: 0px;
-`
+`;
 
 const Subtitle = styled.h3`
   font-style: italic;
   font-size: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
-`
+`;
 
 const LeftSide = () => (
   <Layout>
     <Description>
-      <Title>
-        Hi there! I'm Davide!
-      </Title>
-      <Subtitle>
-        I'm a Full Stack Developer, from London.
-      </Subtitle>
+      <Title>Hi there! I{"'"}m Davide!</Title>
+      <Subtitle>I{"'"}m a Full Stack Developer, from London.</Subtitle>
       <Spacer />
       <div>
         <a href="https://www.linkedin.com/in/davide-crestini-833aa011a/">
@@ -95,6 +91,6 @@ const LeftSide = () => (
       <span>Contact</span> */}
     </Buttons>
   </Layout>
-)
+);
 
-export default LeftSide
+export default LeftSide;

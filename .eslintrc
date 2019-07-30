@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": ["airbnb", "prettier", "prettier/react"],
   "env": {
     "browser": true
@@ -19,7 +20,7 @@
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
-    "react/forbid-prop-types": "warning"
+    "react/forbid-prop-types": 1
   },
   "globals": {
     "window": true,

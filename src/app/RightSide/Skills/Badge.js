@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 // Badge img {
 //   float: left;
@@ -21,16 +20,12 @@ const Div = styled.div`
   border-radius: 25px;
   background-color: #f1f1f1;
   margin-right: 5px;
-`
+`;
 
-const Badge = ({ text }) => (
-  <Div>
-    {text}
-  </Div>
-)
+const Badge = ({ text }) => <Div>{text}</Div>;
 
 Badge.propTypes = {
-  text: PropTypes.string.isRequired
-}
+  text: PropTypes.string.isRequired,
+};
 
-export default Badge
+export default Badge;

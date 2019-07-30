@@ -1,12 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import LinkIcon from 'assets/img/icons/link.svg';
+import GithubIcon from 'assets/img/icons/github.svg';
 
 const Container = styled.div`
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const Title = styled.div`
   display: flex;
@@ -20,18 +22,17 @@ const Title = styled.div`
       margin-right: 15px;
     }
   }
-`
+`;
 
 const Icon = styled.img`
   width: 15px;
-`
+`;
 
 const Text = styled.p`
   display: flex;
   text-align: justify;
   font-size: 14px;
-`
-
+`;
 
 const Project = ({ project }) => (
   <Container>
@@ -40,27 +41,27 @@ const Project = ({ project }) => (
       <div>
         {project.link && (
           <a href={project.link}>
-            <Icon src={require('../../../assets/img/icons/link.svg')} />
+            <Icon src={LinkIcon} />
           </a>
         )}
         {project.code && (
           <a href={project.code}>
-            <Icon src={require('../../../assets/img/icons/github.svg')} />
+            <Icon src={GithubIcon} />
           </a>
         )}
       </div>
     </Title>
     <Text>{project.description}</Text>
   </Container>
-)
+);
 
 Project.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    code: PropTypes.string
-  }).isRequired
-}
+    code: PropTypes.string,
+  }).isRequired,
+};
 
-export default Project
+export default Project;

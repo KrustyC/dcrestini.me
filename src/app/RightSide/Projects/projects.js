@@ -7,7 +7,7 @@ const projects = [
     and fixing bugs. I sporadically have to deal with DevOps, taking care of developing and refactoring our Chef recipes
     to set up new servers and run automated deploy. I also take care of database management.
     `,
-    link: 'https://www.learningladders.info/'
+    link: 'https://www.learningladders.info/',
   },
   {
     title: 'Ladders At Home',
@@ -15,7 +15,7 @@ const projects = [
     how their children and to spot where their weaknesses are, in order to help them better while studying at home.
     I deal with both frontend (React) and backend (Laravel) as well as taking care of the database management.`,
     dates: '04/2017 - current',
-    link: 'https://laddersathome.co.uk/'
+    link: 'https://laddersathome.co.uk/',
   },
   {
     title: 'Muso',
@@ -23,7 +23,7 @@ const projects = [
     and reharshal studios. I work on this on my spare time as a side project. I work both on
     frontend (React) and backend (NodeJs) as well as taking DevOps (Chef Recipes). `,
     dates: '09/2017 - current',
-    link: 'https://gomuso.io/'
+    link: 'https://gomuso.io/',
   },
   {
     title: 'GraphQL & NodeJs Boilerplate',
@@ -32,7 +32,7 @@ const projects = [
     as a starting point for their project. It contains basic functionality  such as authentication, a notification
     system and simple data retrival.
     `,
-    code: 'https://github.com/KrustyC/graphql-node'
+    code: 'https://github.com/KrustyC/graphql-node',
   },
   {
     title: 'React Checkbox',
@@ -40,7 +40,7 @@ const projects = [
     description: `Small open source library, available through npm, which offers a nice and animated checkbox. The 
     component is completely written with styled-components and is fully customisable.`,
     link: 'https://krustyc.github.io/react-checkbox/',
-    code: 'https://github.com/KrustyC/react-checkbox'
+    code: 'https://github.com/KrustyC/react-checkbox',
   },
   {
     title: 'Homypack',
@@ -49,8 +49,8 @@ const projects = [
     a collection point for they online purchases. I developed the whole platform togehter with a fellow students and
     a UX designer. I've benn working both on forntend (AngularJs) and backend (NodeJs) as well as on
     modelling and managing the database (MongoDB).`,
-    link: 'https://www.f6s.com/homypack'
-  }
-]
+    link: 'https://www.f6s.com/homypack',
+  },
+];
 
-export default projects
+export default projects;

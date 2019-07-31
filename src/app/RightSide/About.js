@@ -25,28 +25,18 @@ const About = ({ id, shadowed }) => (
       a small village on the edge of <b>Tuscany</b>, very close to <b>Umbria</b>
       . I lived there until I was 18 when I decided to move to Bologna to study{' '}
       <b>Computer Science</b>. I gruadate in December 2016 and two months later
-      I decided to move to London, to improve my english and challenge myself in
-      a fast pace and competitive environment. I{"'"}m currently employed as as
-      Full Stack PHP Developer at{' '}
+      I decided to move to London, to challenge myself in a fast pace and
+      competitive environment. I{"'"}m currently employed as a Full Stack PHP
+      Developer at{' '}
       <ExternalLink href="https://www.learningladders.info/">
         Learning Ladders
       </ExternalLink>
-      and I{"'"}m working on{' '}
-      <ExternalLink href="https://gomuso.io/">Muso</ExternalLink> together with
-      my friend{' '}
-      <b>
-        <ExternalLink href="http://www.davidfloegel.com/">David</ExternalLink>.
-      </b>
+      .
       <br />
       <br />
       During my spare time I enojy coding, playing football, basketball, tennis,
-      read some books and have a beer ({emojify(':beers:')}) or a glass of wine
-      with my girlfriend and my friends. 2 ago years I completed my first{' '}
-      <ExternalLink href="https://www.spartan.com/en">
-        Spartan Race
-      </ExternalLink>{' '}
-      and I{"'"}m planning to do more as soon as possible. I also love
-      travelling!
+      read some books and have a beer {emojify(':beers:')} or a glass of wine
+      with my girlfriend and my friends. I also love travelling!
       <br />
       <br />
       Back in October 2017 I started volounteering as a mentor at{' '}

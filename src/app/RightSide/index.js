@@ -32,7 +32,7 @@ const RightSide = () => {
       <Projects id="projects" shadowed />
       <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
         <div>
-          <Skills id="skills" isVisible={isSkillSectionVisible}  />
+          <Skills id="skills" isVisible={isSkillSectionVisible} />
         </div>
       </Waypoint>
       <Education id="education" shadowed />

@@ -5,7 +5,6 @@ import LinkIcon from 'assets/img/icons/link.svg';
 import GithubIcon from 'assets/img/icons/github.svg';
 
 const Container = styled.div`
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 `;

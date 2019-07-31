@@ -22,7 +22,7 @@ const TwoSide = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
   `}

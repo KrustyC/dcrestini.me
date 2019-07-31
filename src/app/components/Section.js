@@ -15,14 +15,14 @@ const SectionLayout = styled.div`
   padding: 20px 40px;
   width: 100%;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     padding: 20px 20px;
   `}
 `;
 
 const Title = styled.h1`
   font-size: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 `;
 
 const Div = styled.div`

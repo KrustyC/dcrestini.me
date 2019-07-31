@@ -9,6 +9,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
 
   p {
     font-size: 12px;

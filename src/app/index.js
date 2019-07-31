@@ -13,7 +13,7 @@ const MainLayout = styled.div`
   display: flex;
   min-height: 100vh;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     flex-direction: column;
   `}
 `;

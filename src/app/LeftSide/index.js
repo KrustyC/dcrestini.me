@@ -22,7 +22,7 @@ const Layout = styled.div`
     top: 0px;
   `}
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     height: 100vh;
     padding: 0 10px;
   `}

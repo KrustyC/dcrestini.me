@@ -9,7 +9,6 @@ import ExternalLink from 'components/ExternalLink';
 
 const P = styled.p`
   font-size: 16px;
-  margin-top: 10px;
   a {
     color: ${prop('theme.colors.link')};
     text-decoration: none;

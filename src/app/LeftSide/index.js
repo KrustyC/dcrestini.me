@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import AnchorLink from 'components/AnchorLink';
+import { Link } from 'react-scroll';
+
 import githubIcon from './icons/github.svg';
 import linkedinIcon from './icons/linkedin.svg';
 
@@ -16,7 +17,7 @@ const Layout = styled.div`
   max-width: 100%;
   height: 100vh;
 
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
     position: sticky;
     top: 0px;
   `}
@@ -63,10 +64,6 @@ const Buttons = styled.div`
       color: #e3e2e5;
     }
   }
-
-  ${media.lessThan('medium')`
-    display: none;
-  `}
 `;
 
 const Title = styled.h1`
@@ -98,11 +95,18 @@ const LeftSide = () => (
       </div>
     </Description>
     <Buttons>
-      <AnchorLink href="#about">About</AnchorLink>
-      <AnchorLink href="#projects">Projects</AnchorLink>
-      <AnchorLink href="#skills">Skills</AnchorLink>
-      {/* <span>Education</span>
-      <span>Reading List</span> */}
+      <Link to="about" smooth>
+        about
+      </Link>
+      <Link to="projects" smooth>
+        projects
+      </Link>
+      <Link to="skills" smooth>
+        skills
+      </Link>
+      <Link to="education" smooth>
+        education
+      </Link>
     </Buttons>
   </Layout>
 );

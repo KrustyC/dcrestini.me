@@ -5,9 +5,7 @@ import Waypoint from 'react-waypoint';
 import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
-
-// import ReadingList from './ReadingList'
-// import Education from './Education'
+import Education from './Education';
 import Footer from './Footer';
 
 const Layout = styled.div`
@@ -29,7 +27,7 @@ const RightSide = () => {
   const onLeaveSkillSection = () => setIsSkillSectionVisible(false);
 
   return (
-    <Layout>
+    <Layout id="scrollable">
       <About id="about" />
       <Projects id="projects" shadowed />
       <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
@@ -37,11 +35,8 @@ const RightSide = () => {
           <Skills id="skills" isVisible={isSkillSectionVisible} />
         </div>
       </Waypoint>
-      {/*
-          <Education id="education" shadowed />
-          <ReadingList id="reading-list" />
-          */}
-      <Footer id="footer" shadowed />
+      <Education id="eucation" shadowed />
+      <Footer id="footer" />
     </Layout>
   );
 };

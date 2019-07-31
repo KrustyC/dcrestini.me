@@ -9,8 +9,8 @@ const AnchorLink = ({ children, ...rest }) => {
 
   const onSmoothScroll = e => {
     e.preventDefault();
-
     const id = e.currentTarget.getAttribute('href').slice(1);
+    console.log(document.getElementById('scrollable'));
     document.getElementById('scrollable').scroll({
       top: document.getElementById(id).offsetTop - 0,
       behavior: 'smooth',

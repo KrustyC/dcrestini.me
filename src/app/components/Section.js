@@ -9,7 +9,7 @@ const SectionLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   background: ${ifProp({ shadowed: true }, '#F9F6F5', '#FFFFFF')};
   color: #000000;
   padding: 20px 40px;

@@ -42,6 +42,7 @@
     "react-emojione": "^5.0.0",
     "react-hot-loader": "^4.12.10",
     "react-pose": "^1.6.4",
+    "react-scroll": "^1.7.12",
     "react-waypoint": "^8.0.3",
     "regenerator-runtime": "^0.13.3",
     "smoothscroll-polyfill": "^0.4.4",

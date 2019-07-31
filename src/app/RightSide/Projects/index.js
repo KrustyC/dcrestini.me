@@ -13,7 +13,7 @@ const Grid = styled.div`
   grid-template-columns: 50% 50%;
   grid-column-gap: 30px;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     grid-template-columns: 100%;
   `}
 `;

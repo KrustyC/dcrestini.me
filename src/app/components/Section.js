@@ -9,20 +9,20 @@ const SectionLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   background: ${ifProp({ shadowed: true }, '#F9F6F5', '#FFFFFF')};
   color: #000000;
   padding: 20px 40px;
   width: 100%;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     padding: 20px 20px;
   `}
 `;
 
 const Title = styled.h1`
   font-size: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 `;
 
 const Div = styled.div`

@@ -7,8 +7,8 @@ import Areas from './Areas';
 import Skill from './Skill';
 
 const skills = [
-  { skill: 'Frontend', level: '90' },
-  { skill: 'Backend', level: '80' },
+  { skill: 'Frontend', level: '95' },
+  { skill: 'Backend', level: '85' },
   { skill: 'Databases', level: '65' },
   { skill: 'Testing', level: '75' },
   { skill: 'DevOps', level: '50' },
@@ -22,7 +22,7 @@ const TwoSide = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
   `}

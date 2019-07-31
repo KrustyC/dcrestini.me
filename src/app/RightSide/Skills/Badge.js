@@ -14,7 +14,7 @@ const Div = styled.div`
   background-color: #f1f1f1;
   margin-right: 5px;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     margin-bottom: 10px;
   `}
 `;

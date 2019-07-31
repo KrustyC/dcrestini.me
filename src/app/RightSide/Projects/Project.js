@@ -5,7 +5,6 @@ import LinkIcon from 'assets/img/icons/link.svg';
 import GithubIcon from 'assets/img/icons/github.svg';
 
 const Container = styled.div`
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 `;
@@ -13,13 +12,18 @@ const Container = styled.div`
 const Title = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   h3 {
     margin: 0;
   }
 
   div {
-    a:nth-of-type(1) {
-      margin-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a:nth-of-type(2) {
+      margin-left: 15px;
     }
   }
 `;

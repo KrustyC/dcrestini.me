@@ -30,12 +30,12 @@ const RightSide = () => {
     <Layout id="scrollable">
       <About id="about" />
       <Projects id="projects" shadowed />
-      <Education id="education" />
       <Waypoint onEnter={onEnterSkillSection} onLeave={onLeaveSkillSection}>
         <div>
-          <Skills id="skills" isVisible={isSkillSectionVisible} shadowed />
+          <Skills id="skills" isVisible={isSkillSectionVisible}  />
         </div>
       </Waypoint>
+      <Education id="education" shadowed />
       <Footer id="footer" />
     </Layout>
   );

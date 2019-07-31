@@ -52,6 +52,7 @@ const Buttons = styled.div`
   flex: 1;
   align-items: flex-end;
   justify-content: flex-end;
+  cursor: pointer;
 
   a {
     margin-right: 15px;
@@ -62,6 +63,12 @@ const Buttons = styled.div`
 
     &:hover {
       color: #e3e2e5;
+    }
+
+    &:hover,
+    &:active,
+    &:visited {
+      text-decoration: none;
     }
   }
 `;

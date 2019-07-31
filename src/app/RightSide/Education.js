@@ -43,7 +43,7 @@ const Text = styled.p`
   display: flex;
   text-align: justify;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 7px;
 `;
 
 const Education = ({ id, shadowed }) => (
@@ -56,9 +56,10 @@ const Education = ({ id, shadowed }) => (
         </Title>
         <Subtitle>Mark: 110/100 cum Laude</Subtitle>
         <Text>
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{' '}
+          Here I studied a wide range of subjects, which helped me improving my
+          logical thinking and taught me how to tackle new problems. During
+          University I also developed a few projects with some of my fellow
+          students.
         </Text>
       </Container>
       <Container>
@@ -68,9 +69,9 @@ const Education = ({ id, shadowed }) => (
         </Title>
         <Subtitle>Mark: 100/100</Subtitle>
         <Text>
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{' '}
+          Here is where I learned the basics of software development. I learned
+          how to build console application in C# and towards the end of the
+          shcool I started building a few UI components as well.
         </Text>
       </Container>
     </Flex>

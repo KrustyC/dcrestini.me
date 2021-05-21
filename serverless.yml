@@ -1,0 +1,9 @@
+name: dcrestini-website
+app: dcrestini
+component: website
+
+inputs:
+  src:
+    src: ./
+    hook: npm run build
+    dist: ./dist

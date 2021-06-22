@@ -1,29 +1,20 @@
 {
-  "name": "dcrestini",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "main": "src/index.js",
-  "author": "Davide Crestini <davide.crestini94@gmail.com>",
-  "license": "MIT",
+  "name": "dcrestini.me",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "serve": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@aws-sdk/client-dynamodb": "^3.16.0",
+    "aws-sdk": "^2.912.0",
+    "next": "^10.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.5",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "@sls-next/serverless-component": "^1.19.0"
   }
 }

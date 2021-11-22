@@ -11,7 +11,7 @@
   h6,
   span,
   p {
-    color: #F9DEC9;
+    @apply text-primary;
   }
 
   h1 {
@@ -23,6 +23,5 @@
 
   a {
     @apply text-accent;
-    /* color: text-accent; */
   }
 }

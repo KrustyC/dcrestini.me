@@ -8,11 +8,12 @@ const baseItems = [
     company: "Culture Trip",
     links: {
       github: "",
-      website: "",
+      website:
+        "https://theculturetrip.com/europe/iceland/trips/discover-frozen-wilderness-iceland-tour",
     },
   },
   {
-    title: "Ladders At Home",
+    title: "Learning Ladders",
     year: 2020,
     description:
       "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
@@ -20,7 +21,7 @@ const baseItems = [
     company: "Learning Ladders",
     links: {
       github: "",
-      website: "",
+      website: "https://www.learningladders.info/",
     },
   },
   {
@@ -32,7 +33,7 @@ const baseItems = [
     company: "Learning Ladders",
     links: {
       github: "",
-      website: "",
+      website: "https://laddersathome.co.uk/login",
     },
   },
   {
@@ -68,7 +69,7 @@ exports.handler = async function () {
     statusCode: 200,
     body: JSON.stringify({ projects }),
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   };
 };

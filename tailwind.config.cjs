@@ -17,10 +17,18 @@ module.exports = {
       "primary-soft": "#2D719F",
       accent: "#80ED99",
     },
-    textColor: {
+    backgroundColor: {
+      ...colors,
       primary: "#22577A",
+      "primary-soft": "#2D719F",
+      accent: "#80ED99",
+    },
+    textColor: {
+      primary: "#F9DEC9",
       secondary: "#F9DEC9",
       accent: "#80ED99",
+      "primary-on-accent": "#19323C",
+      "background-primary": "#22577A",
     },
     fontFamily: {
       mono: ["VT323", "monospace"],

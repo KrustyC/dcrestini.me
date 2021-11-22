@@ -51,7 +51,7 @@
       {#if isSubtitleVisible}
         <h2
           in:fly={{ y: 300, duration: 2000 }}
-          class="mb-4 text-secondary font-bold"
+          class="mb-4 text-primary font-bold"
         >
           I build web stuff, and I love Cappucinos
         </h2>

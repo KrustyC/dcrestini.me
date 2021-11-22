@@ -14,6 +14,7 @@ module.exports = {
     colors: {
       ...colors,
       primary: "#22577A",
+      "primary-soft": "#2D719F",
       accent: "#80ED99",
     },
     textColor: {
@@ -22,7 +23,7 @@ module.exports = {
       accent: "#80ED99",
     },
     fontFamily: {
-      mono: ['VT323', "monospace"],
+      mono: ["VT323", "monospace"],
     },
     extend: {
       spacing: {

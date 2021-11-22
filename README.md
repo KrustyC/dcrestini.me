@@ -1,4 +1,7 @@
-# create-svelte
+# dcrestini.me
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e0a9953b-4789-4dc1-893a-971a40d2b18c/deploy-status)](https://app.netlify.com/sites/dcrestini/deploys)
+
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 

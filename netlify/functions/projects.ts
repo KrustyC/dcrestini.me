@@ -105,7 +105,6 @@ const handler: Handler = async (event, context) => {
   try {
     client = await connect();
   } catch (error) {
-    console.error(error);
     return jsonResponse({
       status: 500,
       body: {

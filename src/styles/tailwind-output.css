@@ -708,12 +708,10 @@ video {
 .duration-300 {
 	transition-duration: 300ms;
 }
-
 .hover\:bg-accent:hover {
 	--tw-bg-opacity: 1;
 	background-color: rgba(100, 255, 218, var(--tw-bg-opacity));
 }
-
 .hover\:text-primary:hover {
 	--tw-text-opacity: 1;
 	color: rgba(35, 53, 84, var(--tw-text-opacity));

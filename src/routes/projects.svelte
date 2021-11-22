@@ -1,84 +1,31 @@
+<script context="module">
+  import { variables } from "$lib/variables";
+
+  export async function load({ fetch }) {
+    const url = `${variables.basePath}/.netlify/functions/projects`;
+
+    const res = await fetch(url);
+    const { projects } = await res.json();
+
+    if (res.ok) {
+      return { props: { projects } };
+    }
+
+    return {
+      status: res.status,
+      error: new Error(),
+    };
+  }
+</script>
+
 <script>
   import { slide, fly } from "svelte/transition";
 
-  let showItems = true;
+  export let projects = [];
   let y = 100;
   let i = 10;
-  const baseItems = [
-    {
-      title: "TRIPS by Culture Trip",
-      year: 2020,
-      description:
-        "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      technologies: ["React", "Svelte", "Sapper"],
-      company: "Culture Trip",
-      links: {
-        github: "",
-        website: "",
-      },
-    },
-    {
-      title: "Ladders At Home",
-      year: 2020,
-      description:
-        "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      technologies: ["React", "AWS Cognito"],
-      company: "Learning Ladders",
-      links: {
-        github: "",
-        website: "",
-      },
-    },
-    {
-      title: "Ladders At Home",
-      year: 2020,
-      description:
-        "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      technologies: [
-        "React",
-        "CircleCI",
-        "AWS Lambda",
-        "Mongo DB",
-        "Terraform",
-      ],
-      company: "Learning Ladders",
-      links: {
-        github: "",
-        website: "",
-      },
-    },
-    {
-      title: "Insights",
-      year: 2020,
-      description:
-        "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      technologies: ["React", "Svelte", "Sapper"],
-      company: "Learning Ladders",
-      links: {
-        github: "",
-        website: "",
-      },
-    },
-    {
-      title: "School's Dashboard",
-      year: 2020,
-      description:
-        "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      technologies: ["React", "AWS Cognito", "AWS DynamoDB"],
-      company: "Learning Ladders",
-      links: {
-        github: "",
-        website: "",
-      },
-    },
-  ];
-
-  const items = [...baseItems, ...baseItems, ...baseItems, ...baseItems];
 
   $: i = y / 20 > 12 ? y / 20 : 12;
-  $: {
-    console.log(y, i);
-  }
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -104,19 +51,19 @@
         </tr>
       </thead>
       <tbody>
-        {#each items.slice(0, i) as item}
+        {#each projects.slice(0, i) as project}
           <tr class="h-10 bg-primary hover:bg-primary-soft">
             <td class="p-3 text-accent">
-              {item.year}
+              {project.year}
             </td>
-            <td class="p-3 font-bold">{item.title}</td>
-            <td class="p-3">{item.company}</td>
+            <td class="p-3 font-bold">{project.title}</td>
+            <td class="p-3">{project.company}</td>
             <td class="p-3">
               <div class="flex flex-wrap">
-                {#each item.technologies as technology, i}
+                {#each project.technologies as technology, i}
                   <span class="text-xs text-accent mr-2">
                     {technology}
-                    {#if i < item.technologies.length - 1}
+                    {#if i < project.technologies.length - 1}
                       ·
                     {/if}
                   </span>
@@ -130,9 +77,3 @@
     </table>
   </div>
 </div>
-
-<style>
-  /* .table {
-    border-spacing: 0 15px; */
-  /* } */
-</style>

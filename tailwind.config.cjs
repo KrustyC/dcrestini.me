@@ -13,13 +13,13 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: "#233554",
-      accent: "#64FFDA",
+      primary: "#22577A",
+      accent: "#80ED99",
     },
     textColor: {
-      primary: "#233554",
-      secondary: "#8892b0",
-      accent: "#64FFDA",
+      primary: "#22577A",
+      secondary: "#F9DEC9",
+      accent: "#80ED99",
     },
     fontFamily: {
       mono: ['VT323', "monospace"],

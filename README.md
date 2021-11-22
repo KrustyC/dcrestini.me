@@ -1,31 +1,38 @@
-# Personal Website
+# create-svelte
 
-Hi there! This is the repo for my personal website. The aim of this project is of course to build a website that I can use as an online portfolio, but it's mainly to have a project where I can experiment development tools and framework as well as external services (like CI/CD system, Cloud Hosting, various webhook).
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-## General Info
+## Creating a project
 
-I decided to create an open source project so that other developers can take inspiration from this website (if they like it) and maybe build their own website using this as a starting point. So feel free to fork the repo!
+If you're seeing this, you've probably already done this step. Congrats!
 
-This website has been built using [React](https://reactjs.org/) as a JavaScript framework. Furthermore [Webpack](https://webpack.github.io/docs/tutorials/getting-started/) has been used as a module bundler.
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-## Requirements
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-- [NodeJs](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/lang/en/)
+> Note: the `@next` is temporary
 
-## Development
+## Developing
 
-Once clone the repo run `yarn install` to install all the dependencies.
-To run the project in development mode just run `yarn dev` and then open your browser at [localhost:8080](http://localhost:8080).
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Testing
+```bash
+npm run dev
 
-I'd like to add test in a future, but for the moment there is nothing to test, so I think is not worth :)
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## Linting
+## Building
 
-This repo will follow the [airbnb linting style](https://github.com/airbnb/javascript).
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
-## Contributors
+```bash
+npm run build
+```
 
-I'll be the only contributor but as I said above, if you want to use this project as a starting point for your own website please feel free to fork the repo :)
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.

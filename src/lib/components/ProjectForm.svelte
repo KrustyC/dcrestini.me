@@ -8,7 +8,7 @@
 
 <form on:submit|preventDefault={onSubmit}>
   <div class="flex flex-col">
-    <div class="flex border-b-2 items-center py-4">
+    <div class="flex border-b-2 items-start py-4">
       <div class="flex w-1/3 justify-end pr-4">
         <p class="text-gray-600 font-bold">Title</p>
       </div>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="flex border-b-2 items-center py-4">
+    <div class="flex border-b-2 items-start py-4">
       <div class="flex w-1/3 justify-end pr-4">
         <p class="text-gray-600 font-bold">Year</p>
       </div>
@@ -36,12 +36,12 @@
       </div>
     </div>
 
-    <div class="flex border-b-2 items-center py-4">
-      <div class="flex w-1/3 justify-end pr-4">
+    <div class="flex border-b-2 items-start py-4">
+      <div class="flex w-1/3 items-start justify-end pr-4">
         <p class="text-gray-600 font-bold">Description</p>
       </div>
       <div class="w-2/3 jusitfy-end">
-        <div class="w-full bg-gray-200 appearance-none border-2 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500">
+        <div class="w-full appearance-none w-full py-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500">
           <Editor bind:content={$project.description} />
         </div>
       </div>

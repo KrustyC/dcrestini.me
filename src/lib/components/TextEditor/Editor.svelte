@@ -51,8 +51,6 @@
   </button>
 {/if}
 
-<div class="text-gray-700">
+<div class="text-gray-700 bg-gray-200">
   <div bind:this={element} />
-
-  {@html content}
 </div>

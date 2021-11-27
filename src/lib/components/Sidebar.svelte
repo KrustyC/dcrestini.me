@@ -1,10 +1,18 @@
 <script>
   import { fly } from "svelte/transition";
   import Icon from "$lib/components/Icon.svelte";
+
   import { clickOutside } from "$lib/utils/click-outside";
+  import Document from "@tiptap/extension-document";
+  import { parseJSONtoHTML } from "$lib/utils/html";
+  import Text from "@tiptap/extension-text";
+  import Italic from "@tiptap/extension-italic";
+  import Bold from "@tiptap/extension-bold";
 
   export let project = null;
   export let unsetProject = () => {};
+
+  $: descriptionHTML = project ? parseJSONtoHTML(project.description) : "";
 </script>
 
 {#if project !== null}
@@ -42,7 +50,7 @@
       {/if}
     </div>
 
-    <p class="text-primary-on-accent text-xl mt-8">{project.description}</p>
+    <p class="text-primary-on-accent text-xl mt-8">{@html descriptionHTML}</p>
 
     <div class="flex flex-col mt-8">
       <h4 class="font-bold text-primary-on-accent">Built With</h4>

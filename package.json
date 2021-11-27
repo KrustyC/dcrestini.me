@@ -40,7 +40,10 @@
   "type": "module",
   "dependencies": {
     "@netlify/functions": "^0.9.0",
+    "@tiptap/core": "^2.0.0-beta.143",
+    "@tiptap/starter-kit": "^2.0.0-beta.145",
     "mongodb": "^4.2.0",
+    "prosemirror-svelte": "^0.2.4",
     "svelte-typewriter": "^3.0.0-alpha.5",
     "yup": "^0.32.11"
   }

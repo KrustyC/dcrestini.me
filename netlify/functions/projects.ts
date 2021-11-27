@@ -6,7 +6,7 @@ import { jsonResponse } from "../shared/utils";
 
 let projectSchema = yup.object().shape({
   title: yup.string().required(),
-  description: yup.string().required(),
+  description: yup.object().required(),
   year: yup.number().required().positive().integer(),
   company: yup.string(),
   technologies: yup.array().of(yup.string()).required(),
@@ -82,7 +82,6 @@ async function post(client: MongoClient, event: HandlerEvent) {
       body: { message: "Project successfully inserted" },
     });
   } catch (error) {
-    console.log(error);
     return jsonResponse({
       status: 500,
       body: {

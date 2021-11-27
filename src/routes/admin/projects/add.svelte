@@ -3,6 +3,7 @@
   import Breadcrumb from "$lib/components/Breadcrumb.svelte";
   import Icon from "$lib/components/Icon.svelte";
   import Button from "$lib/components/Button.svelte";
+  import Editor from "$lib/components/TextEditor/Editor.svelte";
   import { project } from "./store.js";
 
   const BREADCRUMBS = [
@@ -21,22 +22,29 @@
   ];
 
   let result = null;
+  let projectData = null;
+
+  project.subscribe((data) => {
+    projectData = data;
+  });
 
   async function onSubmit(event) {
-    const formData = new FormData(event.target);
-    const formUser = {};
-    for (const [k, v] of formData.entries()) {
-      formUser[k] = v;
-    }
+    // const formData = new FormData(event.target);
+    // const formUser = {};
+    // for (const [k, v] of formData.entries()) {
+    //   formUser[k] = v;
+    // }
 
+    console.log(projectData);
     const url = `${variables.basePath}/.netlify/functions/projects`;
-    console.log(formUser);
+    // console.log("submit", event.target, project);
+    // console.log(formUser);
 
     const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify({
         project: {
-          ...formUser,
+          ...projectData,
           technologies: [],
         },
       }),
@@ -46,7 +54,7 @@
     result = JSON.stringify(json);
   }
 
-  console.log(project);
+  $: console.log(project);
 </script>
 
 <!-- This is an example component -->
@@ -93,14 +101,10 @@
         <div class="flex w-1/3 justify-end pr-4">
           <p class="text-gray-600 font-bold">Description</p>
         </div>
-        <div class="flex w-2/3 jusitfy-end">
-          <textarea
-            class="bg-gray-200 appearance-none border-2 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-            name="description"
-            rows="4"
-            cols="50"
-            bind:value={$project.description}
-          />
+        <div class="w-2/3 jusitfy-end">
+          <div class="w-full">
+            <Editor bind:content={$project.description} />
+          </div>
         </div>
       </div>
 
@@ -160,7 +164,3 @@
     </div>
   </form>
 </div>
-
-<!-- <p class="text-gray-700">
-  {JSON.stringify($project, 0, 2)}
-</p> -->

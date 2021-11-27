@@ -1,13 +1,9 @@
 <script>
   import { fly } from "svelte/transition";
-  import Icon from "$lib/components/Icon.svelte";
 
+  import Icon from "$lib/components/Icon.svelte";
   import { clickOutside } from "$lib/utils/click-outside";
-  import Document from "@tiptap/extension-document";
   import { parseJSONtoHTML } from "$lib/utils/html";
-  import Text from "@tiptap/extension-text";
-  import Italic from "@tiptap/extension-italic";
-  import Bold from "@tiptap/extension-bold";
 
   export let project = null;
   export let unsetProject = () => {};

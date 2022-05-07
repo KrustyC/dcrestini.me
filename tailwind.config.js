@@ -3,9 +3,10 @@ const colors = require("tailwindcss/colors");
 
 const newColors = {
   ...colors,
-  primary: "#F47E21",
+  primaryText: "#FFFAFB",
+  primary: "#003459",
+  "primary-soft": "#2D719F",
   accent: "#80ED99",
-  link: "#80ED99",
   "light-gray": "#F5F5F5",
   "admin-link": "#0FC670",
   "admin-primary": "#2D719F",

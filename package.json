@@ -25,10 +25,12 @@
     "react-horizontal-scrolling-menu": "^2.7.2",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
+    "react-spring": "^9.4.5",
     "react-toastify": "^9.0.1",
     "rooks": "^5.11.0",
     "slick-carousel": "^1.8.1",
     "slugify": "^1.6.5",
+    "typewriter-effect": "^2.18.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {

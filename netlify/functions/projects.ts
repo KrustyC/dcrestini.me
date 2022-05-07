@@ -1,42 +1,50 @@
 import { Handler, HandlerEvent } from "@netlify/functions";
-import { MongoClient } from "mongodb";
-import * as yup from "yup";
-import { connect } from "../shared/mongodb-client";
 import { jsonResponse } from "../shared/utils";
+import { ObjectId } from "mongodb";
+import { connect } from "../shared/mongodb-client";
+import { HTTP_METHODS } from "../shared/variables";
 
-let projectSchema = yup.object().shape({
-  title: yup.string().required(),
-  description: yup.object().required(),
-  year: yup.number().required().positive().integer(),
-  company: yup.string(),
-  technologies: yup.array().of(yup.string()).required(),
-  links: yup.object().shape({
-    github: yup.string().url(),
-    website: yup.string().url(),
-  }),
-});
+const PROJECTS_COLLECTION = "projects";
 
-type Project = {
-  title: string;
-  year: number;
-  description: string;
-  technologies: string[];
-  company?: string;
-  links: {
-    github?: string;
-    website?: string;
-  };
-};
-
-const ALLOWED_METHODS = ["GET", "POST"];
-
-async function get(client: MongoClient) {
+async function get(event: HandlerEvent) {
   try {
+    const client = await connect();
+    if (!client) {
+      throw new Error("Can not connect to DB");
+    }
+
+    const { id } = event.queryStringParameters as { id?: string };
+
+    if (id) {
+      const project = await client
+        .db(process.env.MONGO_DB_NAME)
+        .collection(PROJECTS_COLLECTION)
+        .findOne({ _id: new ObjectId(id) });
+
+      if (!project) {
+        return jsonResponse({
+          status: 404,
+          body: {
+            message: "Project not found",
+          },
+        });
+      }
+
+      return jsonResponse({
+        status: 200,
+        body: { project },
+      });
+    }
+
     const projects = await client
-      .db(process.env.VITE_MONGO_DB_NAME)
-      .collection("projects")
+      .db(process.env.MONGO_DB_NAME)
+      .collection(PROJECTS_COLLECTION)
       .find()
       .toArray();
+
+    // projects.sort((a, b) =>
+    //   a.order > b.order ? 1 : b.order > a.order ? -1 : 0
+    // );
 
     return jsonResponse({
       status: 200,
@@ -52,73 +60,15 @@ async function get(client: MongoClient) {
   }
 }
 
-async function post(client: MongoClient, event: HandlerEvent) {
-  try {
-    const { project } = JSON.parse(event.body);
-
-    let projectDocument;
-
-    try {
-      projectDocument = await projectSchema.validate(project);
-    } catch (error) {
-      return jsonResponse({
-        status: 400,
-        body: {
-          message: {
-            name: "Validation Error",
-            error: error.message,
-          },
-        },
-      });
-    }
-
-    await client
-      .db(process.env.VITE_MONGO_DB_NAME)
-      .collection("projects")
-      .insertOne(projectDocument);
-
-    return jsonResponse({
-      status: 200,
-      body: { message: "Project successfully inserted" },
-    });
-  } catch (error) {
-    return jsonResponse({
-      status: 500,
-      body: {
-        message: "Error creating your project, please try again later on.",
-      },
-    });
-  }
-}
-
-const handler: Handler = async (event, context) => {
-  if (!ALLOWED_METHODS.includes(event.httpMethod)) {
+const handler: Handler = async (event) => {
+  if (event.httpMethod !== HTTP_METHODS.GET) {
     return jsonResponse({
       status: 405,
       body: { message: "Method not allowed" },
     });
   }
 
-  let client;
-
-  try {
-    client = await connect();
-  } catch (error) {
-    return jsonResponse({
-      status: 500,
-      body: {
-        message: "Error connecting to the database, please try again later on.",
-      },
-    });
-  }
-
-  if (event.httpMethod === "GET") {
-    return get(client);
-  }
-
-  if (event.httpMethod === "POST") {
-    return post(client, event);
-  }
+  return get(event);
 };
 
 export { handler };

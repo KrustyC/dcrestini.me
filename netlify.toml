@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "build"
+  publish = ".next"
   environment = { NODE_VERSION = "14.13.1" }
  
 [dev]
@@ -9,3 +9,6 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"

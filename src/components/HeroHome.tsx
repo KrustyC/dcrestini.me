@@ -8,13 +8,9 @@ const DELAY = 1000;
 const AnimateMount: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
 }) => {
-  const styles = useSpring({
-    loop: false,
-    to: [{ opacity: 1 }],
-    from: { opacity: 0 },
-  });
+  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
 
-  return <animated.div style={styles}>{children}</animated.div>;
+  return <animated.div style={fade}>{children}</animated.div>;
 };
 
 const THINGS_I_LOVE = [

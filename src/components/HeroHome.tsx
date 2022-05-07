@@ -62,7 +62,7 @@ export const HeroHome = () => {
       <div className="flex flex-grow-1 w-full align-start h-2/5">
         <div className="flex flex-col min-w-2/3 w-2/3 h-full justify-start">
           <div className="h-4">
-            <h4 className="text-xl text-accent font-mono">
+            <span className="text-xl text-accent font-mono">
               <Typewriter
                 options={{
                   delay: 50,
@@ -73,7 +73,7 @@ export const HeroHome = () => {
                     .start();
                 }}
               />
-            </h4>
+            </span>
           </div>
 
           {isMainTitleVisible && (

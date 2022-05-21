@@ -39,6 +39,7 @@ export const useAdminIndexList = <FetchResult, T>({
     const response = parseResponse(data);
 
     setItems(response);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const onWantToRemoveItem = (index: number) => {

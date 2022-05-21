@@ -30,7 +30,7 @@ export async function adminHandler({
   onlyAuthorizedUsers,
 }: Config): Promise<HandlerResponse> {
   if (onlyAuthorizedUsers) {
-    const { user } = context.clientContext as { user?: any };
+    const { user } = context.clientContext as { user?: unknown };
 
     if (!user) {
       return jsonResponse({

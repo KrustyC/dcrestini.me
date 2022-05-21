@@ -46,6 +46,7 @@ export function useNetlifyGetFunction<T>({
     if (user) {
       fetchData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   return { data, loading, error };

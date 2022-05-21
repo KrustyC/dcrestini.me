@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 import { useSpring, animated } from "react-spring";
 
 const BASE_TIMEOUT = 3200;
@@ -118,10 +119,10 @@ export const HeroHome = () => {
         <div className="w-1/3 flex justify-center self-end h-100">
           {isCappuccinoVisible && (
             <AnimateMount>
-              <img
+              <Image
                 className="h-100"
                 src="/images/open-doodles-coffee.png"
-                alt="illustration of myself"
+                alt="cappuccino"
                 loading="lazy"
               />
             </AnimateMount>

@@ -18,7 +18,7 @@ const handler: Handler = async function (event, context) {
     });
   }
 
-  const { user } = context.clientContext as { user?: any };
+  const { user } = context.clientContext as { user?: unknown };
 
   if (!user) {
     return jsonResponse({

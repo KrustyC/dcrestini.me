@@ -100,15 +100,8 @@ export const HeroHome = () => {
           {isParagraphVisible && (
             <AnimateMount>
               <p className="mb-8 w-2/3 text-primaryText">
-                I am software engineer designing and building “things” for the
-                web. Currently, I work as a Principal Engineer and Tech Lead @{" "}
-                <a
-                  href="https://theculturetrip.com"
-                  target="_blank"
-                  rel="noopnener noreferrer"
-                >
-                  Culture Trip.
-                </a>
+                I am Full Stack Software Engineer designing and building
+                “things” for the web.
               </p>
             </AnimateMount>
           )}
@@ -119,12 +112,14 @@ export const HeroHome = () => {
         <div className="w-1/3 flex justify-center self-end h-100">
           {isCappuccinoVisible && (
             <AnimateMount>
-              <Image
-                className="h-100"
-                src="/images/open-doodles-coffee.png"
-                alt="cappuccino"
-                loading="lazy"
-              />
+              <div className="h-[400px] w-[500px] relative">
+                <Image
+                  layout="fill"
+                  src="/images/open-doodles-coffee.png"
+                  alt="cappuccino"
+                  loading="lazy"
+                />
+              </div>
             </AnimateMount>
           )}
         </div>
